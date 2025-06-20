@@ -1,3 +1,21 @@
+document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const menu = document.querySelector('.menu');
+    const files = document.querySelector('.files');
+    
+    mobileMenuBtn.addEventListener('click', function() {
+        menu.classList.toggle('active');
+        files.classList.toggle('active');
+        
+        // Change icon between hamburger and X
+        if (menu.classList.contains('active')) {
+            this.innerHTML = '<i class="fas fa-times">s</i>';
+        } else {
+            this.innerHTML = '<i class="fas fa-bars">s</i>';
+        }
+    });
+});
+
 const jobs = [
   {
     id: 1,
