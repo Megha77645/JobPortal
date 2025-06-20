@@ -188,81 +188,109 @@ img{
     to { opacity: 1; transform: translateY(0);}
 }
 
-@media (max-width: 1025px){
-}
-@media (max-width: 768px) {
-    .login-form {
-        margin: 30px auto;
-        min-height: 550px;
-    }
-    
-    .top-cnt p {
-        font-size: 32px;
-        padding-top: 40px;
-    }
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: black;
 }
 
-@media (max-width: 480px) {
-    .login-form {
-        margin: 20px auto;
-        min-height: 500px;
-        width: 95%;
+@media (max-width:430px) {
+    header {
+        height: auto;
+        flex-wrap: wrap;
+        padding: 15px;
     }
     
-    .top-cnt p {
-        font-size: 28px;
-        padding-top: 30px;
+    .logo {
+        order: 1; /* First item */
+        flex: 1;
+        padding-left: 0;
+        margin-top: 0;
     }
     
-    .form-ip p {
-        font-size: medium;
-        padding-left: 20px;
+    .mobile-menu-btn {
+        display: block;
+        order: 2; /* Second item */
     }
     
-    .submit-bttn > input {
-        height: 45px;
-        width: 320px;
-        margin-left: -20px;
+    .menu {
+        order: 4; /* Last item */
+        display: none; /* Hidden by default */
+        flex-direction: column;
+        width: 100%;
+        margin-top: 15px;
+        gap: 10px;
     }
-
-    .login-form > input{
+    
+    .menu.active {
+        display: flex;
+    }
+    
+    .files {
+        order: 3; /* Before menu */
+        display: none; /* Hidden by default */
+        flex-direction: column;
+        width: 100%;
+        margin-top: 15px;
+        gap: 10px;
+    }
+    
+    .files.active {
+        display: flex;
+    }
+    
+    .menu a, .files a {
+        margin: 0;
+        padding: 10px;
+        text-align: center;
+    }
+    
+    .files-border, .files-borders {
+        width: 100%;
+        text-align: center;
+    }
+    .animation-box2,.animation-box3,.animation-box4,.animation-box5{
+        display: none;
+    }
+    .animation-box1{
+        margin-top: -400px;
+        width: 400px;
         margin-left: 20px;
-        width: 320px;
     }
-    .social-auth > button{
-        width: 320px;
-        margin-left: 28px;
+    .animation-box1 > h1{
+        font-size: 30px;
+        margin-bottom: 30px;
+        text-shadow: 0 20px 15px rgba(0, 0, 0, 0.1);
     }
+    .animation-box1 p{
+        margin-bottom: 15px;
+    }
+    .input-box{
+        width: 380px;
+    }
+    .side > input{
+        height: 50px;
+        width: 100px;
+        border: none;
+    }
+    .input-box-dropdown{
+        margin-left: 20px;
+    }
+    .input-box-dropdown p{
+        color: rgb(60, 59, 59);
+    }
+    img{
+        height: 600px;
+    }
+    .input-box-dropdown { animation-delay: 1.5s;}
 }
-@media (max-width: 401px){
-    .login-form{
-        height: 570px;
-        margin-top: 50px;
+@media (max-width:380px) {
+    img{
+        width: 420px;
     }
-
-    .login-form > input{
-        width: 280px;
-    }
-    .submit-bttn > input{
-        width: 280px;
-    }
-    .social-auth > button{
-        width: 280px;
-        margin-left: 28px;
-    }
-}
-@media (max-width:370px){
-    .login-form > input{
-        width: 230px;
-    }
-    .submit-bttn > input{
-        width: 230px;
-    }
-    .social-auth > button{
-        width: 230px;
-        margin-left: 28px;
-    }
-
 }
 
 
