@@ -9,9 +9,9 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Change icon between hamburger and X
         if (menu.classList.contains('active')) {
-            this.innerHTML = '<i class="fas fa-times">s</i>';
+            this.innerHTML = '<i class="fas fa-times"></i>';
         } else {
-            this.innerHTML = '<i class="fas fa-bars">s</i>';
+            this.innerHTML = '<i class="fas fa-bars"></i>';
         }
     });
 });
