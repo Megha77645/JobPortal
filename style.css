@@ -269,11 +269,11 @@ img{
         margin-bottom: 15px;
     }
     .input-box{
-        width: 380px;
+        width: 340px;
     }
     .side > input{
         height: 50px;
-        width: 100px;
+        width: 80px;
         border: none;
     }
     .input-box-dropdown{
