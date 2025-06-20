@@ -195,6 +195,7 @@ img{
     font-size: 24px;
     cursor: pointer;
     color: black;
+    margin-right: 30px;
 }
 
 @media (max-width:430px) {
