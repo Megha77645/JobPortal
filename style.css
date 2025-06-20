@@ -198,7 +198,7 @@ img{
     margin-right: 30px;
 }
 
-@media (max-width:430px) {
+@media (max-width:480px) {
     header {
         height: auto;
         flex-wrap: wrap;
