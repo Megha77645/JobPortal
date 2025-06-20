@@ -205,3 +205,30 @@ body {
     color: white;
     background-color: #5f8de9;
 }
+
+@media (max-width:480px) {
+    .signup-container{
+        width: 80%;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        height: 850px;
+    }
+    .social-auth-btn{
+        width: 280px;
+        margin-left: 30px;
+    }
+}
+@media (max-width:410px) {
+    .signup-container{
+        width: 90%;
+    }
+    .social-auth-btn{
+        margin-left: 30px;
+    }
+}
+@media (max-width:340px) {
+    .social-auth-btn{
+        width: 230px;
+        margin-left: 30px;
+    }
+}
