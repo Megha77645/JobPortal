@@ -195,7 +195,6 @@ img{
     font-size: 24px;
     cursor: pointer;
     color: black;
-    margin-right: 30px;
 }
 
 @media (max-width:480px) {
@@ -206,7 +205,7 @@ img{
     }
     
     .logo {
-        order: 1; /* First item */
+        order: 2; /* Second item */
         flex: 1;
         padding-left: 0;
         margin-top: 0;
@@ -214,7 +213,7 @@ img{
     
     .mobile-menu-btn {
         display: block;
-        order: 2; /* Second item */
+        order: 1; /* First item */
     }
     
     .menu {
