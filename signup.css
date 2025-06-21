@@ -215,7 +215,7 @@ body {
     }
     .social-auth-btn{
         width: 280px;
-        margin-left: 30px;
+        margin-left: 3px;
     }
 }
 @media (max-width:411px) {
@@ -223,12 +223,16 @@ body {
         width: 90%;
     }
     .social-auth-btn{
-        margin-left: 30px;
+        margin-left: 0px;
     }
 }
 @media (max-width:370px) {
     .social-auth-btn{
         width: 230px;
-        margin-left: 40px;
+        margin-left: 0px;
+    }
+    .toggle-bg{
+        margin-left: -20px;
+        margin-right: -20px;
     }
 }
