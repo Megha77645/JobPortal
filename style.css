@@ -36,6 +36,7 @@ header a{
 }
 .menu a{
     margin: 30px;
+    width: 90%;
     color: black;
 }
 .files{
@@ -43,6 +44,7 @@ header a{
 }
 .files a{
     margin: 8px;
+    width: 90%;
     color: rgb(40, 104, 243);
 }
 .files-border{
@@ -280,12 +282,15 @@ img{
         margin-left: 20px;
     }
     .input-box-dropdown p{
-        color: rgb(60, 59, 59);
+        color: black;
     }
     img{
         height: 600px;
     }
     .input-box-dropdown { animation-delay: 1.5s;}
+    .header-body{
+      height:750px;
+    }
 }
 @media (max-width:410px) {
     img{
@@ -1032,7 +1037,6 @@ top: 100px;
         font-size: 20px;
     }
 }
-
 
 
 
