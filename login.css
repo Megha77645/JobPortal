@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -8,49 +9,51 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f5f5f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
 }
 .login-container{
-    margin-left: 500px;
     background-color: white;
-    margin-top: 80px;
-    padding-top: 20px;
-    height: 570px;
+    padding: 40px 30px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     width: 500px;
+    max-width: 90%;
+    border-radius: 8px;
 }
 
 .login-head h1{
     text-align: center;
-    margin-top: 40px;
-    padding-bottom: 30px;
-}
-
-.login-input{
-    margin-left: 50px;
+    margin-top: 0;
+    margin-bottom: 30px;
 }
 
 .login-input label{
     display: block;
     padding-bottom: 10px;
+    font-weight: 500;
 }
 
 .login-input input{
-    height: 20px;
-    width: 385px;
-    margin-bottom: 15px;
+    height: auto;
+    width: 100%;
+    margin-bottom: 20px;
     padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
 .login-input input:focus{
     outline: none;
     border-color: #16b3e3;
+    box-shadow: 0 0 0 2px rgba(22, 179, 227, 0.2);
 }
 
 .login-btn {
-    width: 410px;
+    width: 100%;
     padding: 12px;
-    margin-top: 20px;
-    margin-left: 50px;
+    margin-top: 10px;
     background-color: #1665e3;
     color: white;
     border: none;
@@ -78,9 +81,7 @@ body {
   display: flex;
   align-items: center;
   text-align: center;
-  margin: 10px 0;
-  padding-left: 52px;
-  padding-right: 72px;
+  margin: 20px 0;
 }
 
 .or-divider::before,
@@ -92,33 +93,25 @@ body {
 
 .or-divider::before {
   margin-right: 10px;
-  margin-top: 5px;
-  margin-bottom: 5px;
 }
 
 .or-divider::after {
   margin-left: 10px;
-  margin-top: 5px;
-  margin-bottom: 5px;
 }
 
 .or-text {
   color: #666;
   font-size: 14px;
   text-transform: uppercase;
-  margin-top: 5px;
-  margin-bottom: 5px;
 }
 
 .social-auth {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 15px;
 }
 .social-auth-btn {
-    width: 375px;
-    height: 30px;
-    margin-left: 70px;
+    width: 100%;
     padding: 12px;
     border-radius: 6px;
     font-size: 1rem;
@@ -128,8 +121,9 @@ body {
     align-items: center;
     justify-content: center;
     gap: 10px;
-    border: 0px;
+    border: 1px solid #ddd;
     background-color: white;
+    transition: all 0.2s ease-in-out;
 }
 
 .social-auth-btn:hover {
@@ -139,33 +133,14 @@ body {
 
 .google-btn { color: #DB4437; }
 .facebook-btn { color: #4267B2; }
+
 .google-btn:hover{
     color: white;
     background-color:  #f8685b;
+    border-color: #f8685b;
 }
 .facebook-btn:hover{
     color: white;
     background-color: #5f8de9;
-}
-
-@media (max-width:480px) {
-    .login-container{
-        margin-left: 15px;
-        width: 400px;
-        margin-top: 30px;
-    }
-    .login-input{
-        margin-left: 20px;
-    }
-    .login-input input{
-        width: 335px;
-    }
-    .login-btn{
-        width: 360px;
-        margin-left: 20px;
-    }
-    .social-auth-btn{
-        width: 350px;
-        margin-left: 20px;
-    }
+    border-color: #5f8de9;
 }

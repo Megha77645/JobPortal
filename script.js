@@ -14,6 +14,29 @@ document.addEventListener('DOMContentLoaded', function() {
             this.innerHTML = '<i class="fas fa-bars"></i>';
         }
     });
+
+    // Scroll-to-top button functionality
+    var scrollBtn = document.getElementById("scrollTopBtn");
+    if (scrollBtn) {
+        window.addEventListener("scroll", function () {
+            if (window.scrollY > 200) {
+                scrollBtn.style.opacity = "1";
+                scrollBtn.style.pointerEvents = "auto";
+            } else {
+                scrollBtn.style.opacity = "0";
+                scrollBtn.style.pointerEvents = "none";
+            }
+        });
+        scrollBtn.addEventListener("click", function () {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth",
+            });
+        });
+        // Initially hide the button
+        scrollBtn.style.opacity = "0";
+        scrollBtn.style.pointerEvents = "none";
+    }
 });
 
 const jobs = [
@@ -39,7 +62,7 @@ const jobs = [
       "Work with BAs, product managers and tech teams to lead the Product Design"
     ],
     skills: [
-      "You have at least 3 years’ experience working as a Product Designer.",
+      "You have at least 3 years' experience working as a Product Designer.",
       "You have experience using Sketch and InVision or Framer X",
       "You have some previous experience working in an agile environment — Think two-week sprints.",
       "You are familiar using Jira and Confluence in your workflow"
@@ -68,7 +91,7 @@ const jobs = [
       "Maintain accurate records of candidate interactions and interview feedback."
     ],
     skills: [
-      "Bachelor’s degree or equivalent work experience.",
+      "Bachelor's degree or equivalent work experience.",
       "Excellent organizational and communication skills.",
       "Experience with applicant tracking systems (ATS) preferred."
     ]
@@ -89,7 +112,7 @@ const jobs = [
       { text: "Urgent", class: "urgent" }
     ],
     apply_url: "#",
-    description: `As a Product Manager, you will drive the vision, strategy, and roadmap for Invision’s Studio product. You will work with cross-functional teams to deliver features.`,
+    description: `As a Product Manager, you will drive the vision, strategy, and roadmap for Invision's Studio product. You will work with cross-functional teams to deliver features.`,
     responsibilities: [
       "Define product vision and strategy for Studio.",
       "Work closely with design, engineering, and marketing teams.",
@@ -124,7 +147,7 @@ const jobs = [
       "Advocate for the user through research and data-driven insights."
     ],
     skills: [
-      "5+ years’ experience in product design.",
+      "5+ years' experience in product design.",
       "Expertise in Figma, Sketch, or similar tools.",
       "Strong portfolio showcasing end-to-end product design."
     ]
@@ -321,51 +344,49 @@ function setupModalLogic() {
 document.addEventListener('DOMContentLoaded', () => {
   renderJobCards();
   setupModalLogic();
-});2
-
-
-
-
-
-
-
+});
 
 //Feedback Akanksha
 document.addEventListener('DOMContentLoaded', function () {
     const slideshow = document.querySelector('.feedback-slideshow');
     const row = document.querySelector('.feedback-row');
-    const containers = document.querySelectorAll('.feedback-container');
-    const containerWidth = document.querySelector('.feedback-container').offsetWidth;
-    const gap = 20;
-    let currentPosition = 0;
     let slideInterval;
 
-    // Set initial position to show first two feedbacks
-    row.style.transform = `translateX(0)`;
-
-    function slideToNext() {
-        // Calculate the width of two containers plus gap
-        const slideWidth = (containerWidth + gap) * 2;
-
-        // If we're at the first position (showing first two feedbacks)
-        if (currentPosition === 0) {
-            currentPosition = -slideWidth; // Move to show third feedback
-        } else {
-            currentPosition = 0; // Return to first position
+    function handleSlideshow() {
+        // Clear any existing interval
+        if (slideInterval) {
+            clearInterval(slideInterval);
         }
 
-        row.style.transform = `translateX(${currentPosition}px)`;
-    }
+        // Check window width
+        if (window.innerWidth < 768) {
+            // On mobile, do nothing (CSS handles layout)
+            row.style.transform = 'translateX(0)';
+            return;
+        }
 
-    function startSlideShow() {
-        // Start with first two feedbacks visible
-        currentPosition = 0;
-        row.style.transform = `translateX(0)`;
-
+        const containers = document.querySelectorAll('.feedback-container');
+        const containerWidth = containers[0].offsetWidth;
+        const gap = 20;
+        let currentPosition = 0;
+    
+        function slideToNext() {
+            const slideWidth = (containerWidth + gap) * 2;
+            currentPosition = currentPosition === 0 ? -slideWidth : 0;
+            // Handle case where there are not enough items to slide
+            if (containers.length <= 2) {
+                currentPosition = 0;
+            }
+            row.style.transform = `translateX(${currentPosition}px)`;
+        }
+        
         // Set interval to slide every 6 seconds
         slideInterval = setInterval(slideToNext, 6000);
     }
 
-    // Start the slideshow
-    startSlideShow();
+    // Initial setup
+    handleSlideshow();
+
+    // Re-evaluate on window resize
+    window.addEventListener('resize', handleSlideshow);
 });

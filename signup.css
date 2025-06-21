@@ -174,9 +174,8 @@ body {
   gap: 10px;
 }
 .social-auth-btn {
-    width: 375px;
-    height: 30px;
-    margin-left: 35px;
+    width: 100%;
+    margin-left: 0;
     padding: 12px;
     border-radius: 6px;
     font-size: 1rem;
@@ -186,8 +185,9 @@ body {
     align-items: center;
     justify-content: center;
     gap: 10px;
-    border: 0px;
+    border: 1px solid #ddd;
     background-color: white;
+    transition: all 0.2s ease-in-out;
 }
 
 .social-auth-btn:hover {
@@ -200,35 +200,20 @@ body {
 .google-btn:hover{
     color: white;
     background-color:  #f8685b;
+    border-color: #f8685b;
 }
 .facebook-btn:hover{
     color: white;
     background-color: #5f8de9;
+    border-color: #5f8de9;
 }
 
 @media (max-width:480px) {
     .signup-container{
-        width: 80%;
-        margin-top: 10px;
-        margin-bottom: 10px;
-        height: 850px;
-    }
-    .social-auth-btn{
-        width: 280px;
-        margin-left: 30px;
-    }
-}
-@media (max-width:411px) {
-    .signup-container{
         width: 90%;
-    }
-    .social-auth-btn{
-        margin-left: 30px;
-    }
-}
-@media (max-width:370px) {
-    .social-auth-btn{
-        width: 230px;
-        margin-left: 40px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        padding: 20px;
+        height: auto;
     }
 }
