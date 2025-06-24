@@ -162,7 +162,7 @@ const jobs = [
     title: "UI/UX Designer",
     company: "Figma",
     location: "London, UK",
-    logo:  "https://www.figma.com/community/resource/3295ec6c-611f-469c-8ec7-b243bffdc367/thumbnail",
+    logo:  "https://assets.toptal.io/images?url=https%3A%2F%2Fbs-uploads.toptal.io%2Fblackfish-uploads%2Fcomponents%2Fskill_page%2F34403%2Flogo%2Foptimized%2Fui-24b9a12e4e385375647fd19e9b5ebc2d.png",
     time: "10 hours ago",
     posted: "Posted 30 minutes ago",
     expiration: "July 15, 2025",
