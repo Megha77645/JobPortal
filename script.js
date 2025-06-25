@@ -331,41 +331,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 //Feedback Akanksha
-document.addEventListener('DOMContentLoaded', function () {
-    const slideshow = document.querySelector('.feedback-slideshow');
-    const row = document.querySelector('.feedback-row');
-    const containers = document.querySelectorAll('.feedback-container');
-    const containerWidth = document.querySelector('.feedback-container').offsetWidth;
-    const gap = 20;
-    let currentPosition = 0;
-    let slideInterval;
+document.addEventListener("DOMContentLoaded", function () {
+        const row = document.querySelector(".feedback-row");
+        const containers = document.querySelectorAll(".feedback-container");
+        const gap = 20;
+        let index = 0;
 
-    // Set initial position to show first two feedbacks
-    row.style.transform = `translateX(0)`;
+        function slide() {
+          const screenWidth = window.innerWidth;
+          const showCount = screenWidth <= 768 ? 1 : 2;
+          const itemWidth = containers[0].offsetWidth + gap;
+          const maxIndex = containers.length - showCount;
 
-    function slideToNext() {
-        // Calculate the width of two containers plus gap
-        const slideWidth = (containerWidth + gap) * 2;
-
-        // If we're at the first position (showing first two feedbacks)
-        if (currentPosition === 0) {
-            currentPosition = -slideWidth; // Move to show third feedback
-        } else {
-            currentPosition = 0; // Return to first position
+          index = index + showCount > maxIndex ? 0 : index + showCount;
+          row.style.transform = `translateX(-${index * itemWidth}px)`;
         }
 
-        row.style.transform = `translateX(${currentPosition}px)`;
-    }
-
-    function startSlideShow() {
-        // Start with first two feedbacks visible
-        currentPosition = 0;
-        row.style.transform = `translateX(0)`;
-
-        // Set interval to slide every 6 seconds
-        slideInterval = setInterval(slideToNext, 6000);
-    }
-
-    // Start the slideshow
-    startSlideShow();
-});
+        setInterval(slide, 5000);
+      });
