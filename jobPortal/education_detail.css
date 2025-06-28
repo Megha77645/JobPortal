@@ -1,0 +1,94 @@
+education_detail.css
+
+body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f3f3f3;
+      padding: 20px;
+    }
+
+    .form-container {
+      max-width: 600px;
+      margin: 30px auto;
+      background: #fff;
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .educationDetail_heading h2{
+        margin-top: 20px;
+        margin-left: 30px;
+        padding-bottom: 25px;
+    }
+    .educationDetail_heading{
+        border-bottom: 1px solid grey;
+        display: flex;
+    }
+    .option-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .option-group input[type="radio"] {
+      display: none;
+    }
+
+    .option-group label {
+      padding: 10px 20px;
+      border: 1px solid #ccc;
+      border-radius: 20px;
+      background-color: white;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .option-group input[type="radio"]:checked + label {
+      background-color: #e6f5ea;
+      border-color: #4caf50;
+      color: #4caf50;
+      font-weight: bold;
+    }
+    .question {
+      margin: 20px 0 10px;
+      font-weight: 700;
+      font-size: 13px;
+    }
+    select, #collagename input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      margin-top: 8px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+    .row {
+      display: flex;
+      gap: 10px;
+    }
+
+    .row select {
+      flex: 1;
+    }
+
+    .submit-btn {
+      margin-top: 30px;
+      width: 100%;
+      padding: 12px;
+      background: #1d7f74;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .submit-btn:hover {
+      background: #145f58;
+    }
+    .option-group label{
+      font-size: 12px;
+    }
+
+    #collagename{
+      width: 96.5%;
+    }

@@ -1,0 +1,46 @@
+body{
+    background-color: rgb(247, 244, 241);
+}
+.resume-main-container{
+    height:550px;
+    width:700px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-left: 27%;
+    margin-top:5%;
+    border-radius: 20px;
+
+}
+.resume-container{
+    text-align: center;
+    margin-top: 50px;
+
+}
+.resume-btn{
+    border-radius: 5px;
+    height: 40px;
+    width: 90%;
+    background-color:#228364;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    color: white;
+    letter-spacing: 1px;
+    border: 0px;
+}
+.resume-btn:hover{
+    background: #165541;
+}
+#file{
+    font-size: 15px;
+    position: relative;
+    left: 60px;
+}
+.resume-tiltle{
+    text-align: left;
+    position: relative;
+    top: 20px;
+    left: 20px;
+    margin-right: 40px;
+    border-bottom: 1px solid grey;
+}
