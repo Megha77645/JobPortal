@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.resume-container{
+    height: 810px;
+    padding-top: 70px;
+    width: 100%;
+    background: linear-gradient(135deg, #f3f6fb, #e6effc);
+    padding-left: 100px;
+}
+.resume-container h1{
+    font-size: 40px;
+    font-weight: 500;
+    padding-top: 50px;
+}
+.resume-container p{
+    margin-top: 10px;
+    font-size: 18px;
+    color: grey;
+}
+.resume-content{
+    margin-top: 60px;
+    background-color: white;
+    height:60%;
+    margin-right: 200px;
+    border-radius: 15px;
+}
+.resume-content h4{
+    padding-top: 40px;
+    margin-left: 20px;
+    font-weight: 500;
+    font-size: 25px;
+}
+#resume-box{
+    text-align: center;
+    height: 60%;
+    margin-top: 60px;
+    margin-left: 40px;
+    margin-right: 40px;
+    border: 4px dashed rgba(128, 128, 128, 0.633);
+    border-radius: 8px;
+}
+#resume-box:hover{
+    border: 4px dashed rgba(0, 0, 0, 0.784);
+}
+#resume-box h3{
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 80px;
+    color: #174fb6eb;
+}
+#resume-box > button{
+    margin-top: 25px;
+    padding: 12px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color:#174fb6eb;
+    color: white;
+    border-radius: 8px;
+    border: 0px;
+}
+#resume-box > button:hover{
+    background-color:  #174eb6;
+    color: white;
+}
+
+@media (max-width: 1024px){
+    .resume-container{
+        height: 680px;
+        width:100%;
+    }
+    .resume-content{
+        height: 65%;
+        margin-right: 90px;
+    }
+}
+@media (max-width:768px){
+    .resume-container{
+        height: 700px;
+    }
+    .resume-container h1{
+        font-size: 30px;
+    }
+    .resume-container p{
+        font-size: 15px;
+    }
+    .resume-content h4{
+        font-size: 20px;
+    }
+    #resume-box h3{
+        font-size: 17px;
+    }
+}
+@media (max-width:480px){
+    .resume-container{
+        height: 670px;
+        padding: 50px;
+    }
+    .resume-content{
+        margin-right: 0px;
+    }
+    .resume-container h1{
+        padding-top: 0px;
+    }
+}
+@media(max-width:380px) {
+    .resume-container{
+        height: 690px;
+    }
+    .resume-content{
+        margin-top: 100px;
+    }
+    .resume-container h1{
+        font-size: 40px;
+    }
+}
+@media(max-width: 340px){
+    .resume-container{
+        height: 710px;
+    }
+}
