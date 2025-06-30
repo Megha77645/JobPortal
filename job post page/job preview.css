@@ -1,0 +1,215 @@
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #e8f3fa;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 890px;
+      margin: auto;
+      background: #fff;
+      padding: 25px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      margin-top: 25px;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 30px;
+      margin-top: -10px;
+      margin-bottom: 40px;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+
+    .section {
+      margin-bottom: 30px;
+    }
+
+    .section h3 {
+      margin-bottom: 10px;
+      font-size: 20px;
+      color: #000000;
+      border-bottom: 1px solid #898787;
+      padding-bottom: 5px;
+    }
+
+    .info {
+      padding: 10px 0;
+      font-size: 17px;
+      line-height: 1.6;
+    }
+
+    .info strong {
+      display: inline-block;
+      width: 220px;
+      color: #333;
+    }
+
+    .highlight {
+      background-color: #f0f6ff;
+      padding: 10px;
+      border-left: 4px solid  #228364;
+      margin-top: 15px;
+    }
+
+
+        .buttons {
+      display: flex;
+      justify-content: center;
+      margin-top: 40px;
+    }
+
+    button {
+      padding: 8px 20px;
+      border: none;
+      font-size: 1em;
+     border-radius: 5PX;
+      cursor: pointer;
+    }
+
+    .back-btn {
+      background-color: #e0e0e0;
+      color: #333;
+    }
+
+    .continue-btn {
+      background-color:  #228364;
+      color: white;
+    }
+
+
+
+
+
+
+.step {
+  position: relative;
+  text-align: center;
+  flex: 1;
+  background-color: #ffffff;
+  padding: 5px;
+}
+
+.circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #ccc;
+  color: white;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  z-index: 1;
+}
+
+.step.active .circle {
+  background-color: #096548;
+}
+
+.label {
+  font-size: 18px;
+  font-weight: 600;
+  font-family:Arial, Helvetica, sans-serif;
+  color: #000000;
+  margin-top: 8px;
+  display: block;
+}
+
+/* connecting lines */
+.step::before {
+  content: "";
+  position: absolute;
+  bottom: 80%;
+  left: -42.2%;
+  width: 100%;
+  height: 2px;
+  background-color: #ccc;
+  z-index: 0;
+}
+
+.step:first-child::before {
+  display: none;
+}
+
+
+
+
+
+
+
+.buttons{
+  background-color: #ffffff;
+  max-width: 830px;
+  padding: 5px;
+  padding-bottom: revert;
+  height: 45px;
+  gap: 20px;
+}
+
+
+
+
+
+
+
+
+.step-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 910px;
+  margin: auto;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  flex: 1;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.step:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 15px;
+  right: -50%;
+  width: 100%;
+  height: 2px;
+  background-color: #ccc;
+  z-index: -1;
+}
+
+.circle {
+  width: 30px;
+  height: 30px;
+  background-color: #ccc;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.step.active .circle {
+  background-color: #096548; /* Blue */
+}
+
+.step p {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+  color: #000;
+  line-height: 1.2;
+}
