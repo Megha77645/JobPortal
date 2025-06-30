@@ -200,6 +200,70 @@ img{
     color: black;
 }
 
+@media(max-width:1100px) {
+  .logo{
+    padding-left: 0;
+    margin-top: 6px;
+    width: 120px;
+    margin-right: 40px;
+  }
+  .menu a{
+    margin: 5px;
+  }
+  .menu{
+    margin-left: -50px;
+  }
+  .animation-box2{
+    margin-left: 400px;
+  }
+  .animation-box3{
+    margin-left: 100px;
+  }
+  .animation-box4{
+    margin-left: 850px;
+    margin-top: -110px;
+  }
+  .animation-box5{
+    margin-left: 600px;
+  }
+}
+
+@media(max-width:800px){
+  .logo{
+    font-size: small;
+    width: 80px;
+    margin-top: 20px;
+    margin-left: -10px;
+  }
+  .menu{
+    margin-left: -65px;
+  }
+  .files a{
+    margin: 0px;
+  }
+  .menu a{
+    font-size: small;
+  }
+  .files a{
+    font-size: small;
+  }
+  .animation-box1{
+    margin-top: -600px;
+    margin-left: 60px;
+    width: 700px;
+  }
+  .side > input{
+    width: 255px;
+  }
+  .input-box{
+    width: 690px;
+  }
+  .animation-box2,.animation-box3,.animation-box4,.animation-box5{
+    display: none;
+  }
+  .input-box-dropdown { animation-delay: 1.5s;}
+}
+
 @media (max-width:480px) {
     header {
         height: auto;
@@ -208,6 +272,7 @@ img{
     }
     
     .logo {
+        font-size: larger;
         order: 2; /* Second item */
         flex: 1;
         padding-left: 0;
@@ -226,6 +291,7 @@ img{
         width: 100%;
         margin-top: 15px;
         gap: 10px;
+        margin-left: 15px;
     }
     
     .menu.active {
