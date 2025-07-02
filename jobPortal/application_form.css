@@ -13,16 +13,15 @@ body{
 }
 .basicdetail_heading{
     border-bottom: 1px solid grey;
-    margin-left: 30px;
-    margin-right: 30px;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 .basicdetail_box{
-    height: 600px;
-    width: 700px;
+    height: 620px;
+    width: 40%;
     background-color: #fff;
-    margin-left: 400px;
+    margin-left: 30%;
     padding-top: 10px;
-    /* border: 1px solid grey; */
     border-radius: 25px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
@@ -35,36 +34,17 @@ body{
     height: 30px;
     border-radius: 5px;
     border: 1px solid grey;
-    width: 630px;
+    width: 95%;
 }
 .basicdetail_input input:focus{
     outline: none;
     border-color:rgb(150, 204, 238);
 }
-.createprofile-button{
-    margin-left: 10px;
-    margin-top: 25px;
-}
-.createprofile-button a{
-    text-decoration: none;
-    color: white;
-}
-.createprofile-button > button{
-    padding-left: 245px;
-    padding-right: 245px;
-    padding-top: 8px;
-    font-size: 18px;
-    padding-bottom: 8px;
-    border: 0px;
-    border-radius: 8px;
-    background-color: rgb(23, 140, 212);
-    color: white;
-}
 #options{
     margin-top: 10px;
     border-radius: 5px;
-    width: 630px;
-    height: 40px;
+    width: 95%;
+    height: 30%;
 }
 
 .gender-detail{
@@ -89,7 +69,7 @@ body{
 .form-navigation {
   display: flex;
   justify-content: space-between;
-  margin-top: 20px;
+  margin-top: 5%;
 }
 .form-navigation a{
     text-decoration: none;
@@ -99,6 +79,37 @@ body{
 .progress-dots {
     text-align: center;
     margin: 20px 0;
+}
+@media (max-width: 830px){
+    .basicdetail_box{
+        width: 70%;
+        margin-left: 16%;
+        height: 560px;
+    }
+    .basicdetail_heading h2{
+        font-size: 20px;
+        font-weight: 640;
+        margin-left: 5%;
+        padding-bottom: 5px;
+    }
+    .basicdetail_box p{
+        font-size: 14px;
+    }
+    .basicdetail_box h4{
+        font-size: 14px;
+    }
+}
+@media(max-width:430px){
+    .basicdetail_box{
+        width: 90%;
+        margin-left: 5%;
+        height: 560px;
+    }
+}
+@media (max-width:340px){
+    .basicdetail_box{
+        height: 580px;
+    }
 }
 
 .dot {
@@ -129,33 +140,47 @@ body{
 }
 
 .jobtype_box{
-    height: 650px;
-    width: 650px;
+    height: 625px;
+    width: 38%;
     background-color: #fff;
-    margin-left: 400px;
-    margin: 30px auto;
+    margin-top: 2%;
+    margin-left: 30%;
     padding-top: 10px;
-    /* border: 1px solid grey; */
     border-radius: 25px;
     padding-left: 30px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
+@media(max-width:830px){
+    .jobtype_box{
+        width: 65%;
+        margin-left: 17%;
+    }
+    .jobtype_heading h2{
+        font-size: 20px;
+        padding-bottom: 0;
+    }
+}
+@media(max-width:430px){
+    .jobtype_box{
+        height: 600px;
+        width: 80%;
+        margin-top: 5%;
+        margin-left: 5%;
+    }
+}
 .jobtype_heading{
     border-bottom: 1px solid grey;
-    /* margin-left: -30px; */
     display: flex;
-    
-    margin-left: 10px;
     margin-right: 40px;
 }
 .jobtype_box h2{
-    margin-top: 20px;
-    margin-left: 70px;
-    padding-bottom: 25px;
+    margin-top: 2%;
+    margin-left: 2%;
+    padding-bottom: 2%;
 }
 .option-input-box 
 {
-    margin-left: 20px;
+    margin-left: 3%;
 }
 .option-name
 {
@@ -165,7 +190,7 @@ body{
     margin-bottom: 15px;
     border: 1px solid rgb(172, 170, 170);
     height: 35px;
-    width: 576px;
+    width: 91%;
     border-radius: 4px;
 }
 .option-name:hover{
@@ -174,6 +199,7 @@ body{
 .option-input-box p
 {
     font-size: 15px;
+    font-weight:bolder;
     margin-bottom: 10px;
     margin-top: 15px;
     font-weight: 600;
@@ -182,7 +208,7 @@ body{
 input[type="checkbox"] 
 {
     margin-right: 10px;
-    width: 16px;
+    width: 5%;
     height: 16px;
     margin-left: 5px;
 }
@@ -202,14 +228,14 @@ label
 }
 .nextt-btn {
     width: 100%;
-    padding: 10px 20px;
+    padding: 2% 2%;
     background: #228364;
     color: white;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    margin-left: 25px;
-    margin-right: 25px;
+    margin-left: 4%;
+    margin-right: 4%;
 }
 .nextt-btn:hover {
    background: #196e52;
