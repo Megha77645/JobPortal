@@ -181,7 +181,26 @@ button:active {
     margin-bottom: 16px;
   }
   .main-heading {
-    font-size: 1.1rem;
+    font-size: 1.4rem;
+  }
+  .back-arrow {
+    font-size: 1.3rem;
+    padding: 0 6px 0 0;
+  }
+}
+@media (max-width: 430px) {
+  .location-content {
+    max-width: 90vw;
+    padding: 18px 2vw 18px 2vw;
+    box-shadow: none;
+    border-radius: 25px;
+  }
+  .location-header {
+    margin-bottom: 40px;
+    margin-top: 40px;s
+  }
+  .main-heading {
+    font-size: 1.4rem;
   }
   .back-arrow {
     font-size: 1.3rem;
