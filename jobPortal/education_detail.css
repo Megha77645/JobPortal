@@ -105,6 +105,8 @@ body {
   .educationDetail_heading h2{
     font-size: 20px;
     margin-left: 10px;
+    margin-bottom: -13px;
+    margin-top: 14px;
   }
   .form-container {
     padding: 20px;
@@ -113,4 +115,18 @@ body {
     padding: 10px;
     font-size: 14px;
   }
+
+  .option-group label {
+    padding: 8px 11px;
+    font-size: 11px;
+  }
+  .question {
+    margin:12px 0 5px;
+  }
+  select, #collagename input[type="text"] {
+    padding: 10px;
+    font-size: 12px;
+    margin-top: -12px;
+  }
+  
 }
