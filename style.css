@@ -672,7 +672,16 @@ img{
     margin-left: 0;
   }
 }
-
+@media (max-width: 400px){
+  .feature-body{
+    margin-right: -40px;
+  }
+}
+@media (max-width: 360px){
+  .feature-body{
+    margin-right: -100px;
+  }
+}
 /* Modal Overlay */
 .job-modal-overlay {
   position: fixed;
@@ -908,6 +917,17 @@ img{
     font-size: 0.93rem;
   }
 }
+@media (max-width: 400px){
+  .feedback-part{
+    margin-right: -45px;
+  }
+}
+@media (max-width: 360px){
+  .feedback-part{
+    margin-right: -100px;
+  }
+}
+
 body.modal-open .featured-jobs-section {
   filter: blur(5px);
   pointer-events: none;
