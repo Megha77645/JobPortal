@@ -39,8 +39,18 @@ body{
 .resume-tiltle{
     text-align: left;
     position: relative;
-    top: 20px;
+    top: 5px;
     left: 20px;
     margin-right: 40px;
-    border-bottom: 1px solid grey;
+    
+}
+
+.jobtype_heading .prev-btn {
+    
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    
 }
