@@ -381,7 +381,7 @@ img{
 
 .job-categories-container {
     text-align: center;
-    max-width: 1200px; 
+    max-width: 88%; 
     width: 100%;
     margin-top: 0px; 
 }
@@ -486,9 +486,9 @@ img{
 @media (max-width: 480px) {
     .category-card {
         padding: 20px;
-        width:310px;
+        width: 400px;
         height: 100px; 
-        margin-right: -100px;
+        margin-right: -50px;
     }
     .icon-box {
         padding: 10px;
@@ -506,13 +506,13 @@ img{
 
     }
 .categories-subtext {
-  margin-right: -100px;
+  margin-right: -50px;
 }
     .job-categories-container h2 {
     font-size: 28px;
     color: #333;
     margin-bottom: 10px;
-    margin-right: -100px;
+    margin-right: -50px;
 }
     .category-card p {
         font-size: 0.9em;
