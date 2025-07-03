@@ -483,7 +483,7 @@ img{
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 420px) {
     .category-card {
         padding: 20px;
         width: 400px;
@@ -519,6 +519,7 @@ img{
         margin-left: 50px;
     }
 }
+
 .feature-body {
   margin: 0;
   padding: 0;
@@ -557,6 +558,16 @@ img{
   .featured-jobs-grid {
     grid-template-columns: 1fr;
     gap: 14px;
+  }
+}
+@media(max-width:400px){
+  .feature-body{
+    margin-right: -40px;
+  }
+}
+@media(max-width:350px){
+  .feature-body{
+    margin-right: -90px;
   }
 }
 .job-card {
@@ -1084,6 +1095,16 @@ body.modal-open .featured-jobs-section {
 
         .feedback-slideshow {
           height: auto;
+        }
+      }
+      @media(max-width:400px){
+        .feedback-part{
+          margin-right: -40px;
+        }
+      }
+      @media(max-width:360px){
+        .feedback-part{
+          margin-right: -100px;
         }
       }
 
