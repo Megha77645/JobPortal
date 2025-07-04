@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FAQ's</title>
-    <link rel="stylesheet" href="FAQ's.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <meta charset="UTF-8">
+  <title>Candidates</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="candidate.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
         <header>
@@ -28,7 +27,7 @@
                         <a href="#">Employers</a>
                     </span>
                     <span class="menu">
-                        <a href="candidate.html">Candidates</a>
+                        <a href="#">Candidates</a>
                     </span>
                     <span class="menu">
                         <a href="#">Blogs</a>
@@ -62,67 +61,113 @@
             </div>
         </header>
 
-    <!-- Frequently asked Questions -->
-    <div class="faq-body">
-        <div class="faq-top">
-            <div class="faq">FAQ's</div>
-            <div class="home-faq">Home / FAQ's</div>
-        </div>
-        <div class="faq-container">
-            <h3>Frequently Asked Questions</h3>
-            <div class="faq-item">
-                <div class="faq-question">
-                    <h3>How do I create an account on the Job Portal?</h3>
-                    <i class="fas fa-chevron-down"></i>
-                </div>
-                <div class="faq-answer">
-                    <p>Creating an account is simple! Click on the "Sign Up" button at the top right corner of the page, fill in your details (name, email, and password), and verify your email address. Once verified, your account will be ready to use.</p>
-                </div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-question">
-                    <h3>Is the job portal free for job seekers?</h3>
-                    <i class="fas fa-chevron-down"></i>
-                </div>
-                <div class="faq-answer">
-                    <p>Yes, our job portal is completely free for job seekers. You can create an account, search for jobs, and apply without any charges.</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">
-                    <h3>How do I reset my password if I forget it?</h3>
-                    <i class="fas fa-chevron-down"></i>
-                </div>
-                <div class="faq-answer">
-                    <p>Click on the "Forgot Password" link on the login page, enter your registered email address, and we'll send you a password reset link. Follow the instructions in the email to set a new password.</p>
-                </div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-question">
-                    <h3>How can I search for jobs on the portal?</h3>
-                    <i class="fas fa-chevron-down"></i>
-                </div>
-                <div class="faq-answer">
-                    <p>Use the search bar at the top of the page to enter keywords, job titles, or company names. You can also filter results by location, job type, or salary range to find the most relevant opportunities.</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">
-                    <h3>How do I apply for a job?</h3>
-                    <i class="fas fa-chevron-down"></i>
-                </div>
-                <div class="faq-answer">
-                    <p>Once you find a job you're interested in, click on the "Apply Now" button. You can either upload your resume or fill out the application form directly. Make sure your profile is up-to-date before submitting your application.</p>
-                </div>
-            </div>
-        </div>
+  <div class="candidates-header">
+    <h1>Candidates</h1>
+    <div class="breadcrumb">
+      Home / Candidates
     </div>
-        <footer class="superio-footer">
+  </div>
+
+  <div class="container">
+    <!-- Mobile filter button (hidden on desktop) -->
+    <button class="mobile-filter-btn" id="openFilterBtn">
+      &#x1F50D; Filter
+    </button>
+    <!-- Overlay for mobile filter -->
+    <div class="mobile-filter-overlay" id="filterOverlay"></div>
+    <!-- Sidebar Filters -->
+    <aside class="sidebar-filters" id="sidebarFilters">
+      <button class="close-filter-btn" id="closeFilterBtn">&times;</button>
+      <div class="filter-group">
+        <span class="filter-title">Search by Keywords</span>
+        <input type="text" id="keywordInput" class="filter-input" placeholder="Job title, keywords, or company">
+      </div>
+      <div class="filter-group">
+        <span class="filter-title">Location</span>
+        <input type="text" id="locationInput" class="filter-input" placeholder="City or postcode">
+        <span class="range-label">Radius around selected destination</span>
+        <input type="range" id="radiusInput" min="0" max="200" value="100" step="10" style="width:100%;">
+        <span class="range-value" id="radiusValue">100km</span>
+      </div>
+      <div class="filter-group">
+        <span class="filter-title">Category</span>
+        <select id="categoryInput" class="filter-select">
+          <option value="">Choose a category</option>
+          <option value="Design">Design</option>
+          <option value="Development">Development</option>
+          <option value="Marketing">Marketing</option>
+          <option value="Accountant">Accountant</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <span class="filter-title">Candidate Gender</span>
+        <select id="genderInput" class="filter-select">
+          <option value="">Any</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <span class="filter-title">Date Posted</span>
+        <div class="filter-radio-list" id="datePostedGroup">
+          <label><input type="radio" name="datePosted" value="all" checked>All</label>
+          <label><input type="radio" name="datePosted" value="1">Last Hour</label>
+          <label><input type="radio" name="datePosted" value="24">Last 24 Hour</label>
+          <label><input type="radio" name="datePosted" value="168">Last 7 Days</label>
+          <label><input type="radio" name="datePosted" value="336">Last 14 Days</label>
+          <label><input type="radio" name="datePosted" value="720">Last 30 Days</label>
+        </div>
+      </div>
+      <div class="filter-group">
+        <span class="filter-title">Experience</span>
+        <div class="filter-options" id="experienceGroup">
+          <label class="filter-switch"><input type="checkbox" value="Fresh">Fresh</label>
+          <label class="filter-switch"><input type="checkbox" value="1">1 Year</label>
+          <label class="filter-switch"><input type="checkbox" value="2">2 Year</label>
+          <label class="filter-switch"><input type="checkbox" value="3">3 Year</label>
+          <label class="filter-switch"><input type="checkbox" value="4">4 Year</label>
+        </div>
+      </div>
+      <div class="filter-group">
+        <span class="filter-title">Qualification</span>
+        <div class="filter-options" id="qualificationGroup">
+          <label class="filter-switch"><input type="checkbox" value="Certificate">Certificate</label>
+          <label class="filter-switch"><input type="checkbox" value="Associate Degree">Associate Degree</label>
+          <label class="filter-switch"><input type="checkbox" value="Bachelor Degree">Bachelor Degree</label>
+          <label class="filter-switch"><input type="checkbox" value="Master's Degree">Master's Degree</label>
+          <label class="filter-switch"><input type="checkbox" value="Doctorate Degree">Doctorate Degree</label>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <div class="candidates-list-header">
+        <span class="jobs-count" id="jobsCount">0 jobs</span>
+        <div class="sort-group">
+          <select id="sortSelect">
+            <option value="">Sort by (default)</option>
+            <option value="name">Name</option>
+            <option value="rate">Hourly Rate</option>
+          </select>
+          <select id="categorySelect">
+            <option value="">All</option>
+            <option value="Design">Design</option>
+            <option value="Development">Development</option>
+            <option value="Marketing">Marketing</option>
+            <option value="Accountant">Accountant</option>
+          </select>
+        </div>
+      </div>
+      <div class="candidates-grid" id="candidatesGrid">
+        <!-- Candidate cards will be rendered here -->
+      </div>
+    </main>
+  </div>
+
+  <footer class="superio-footer">
       <div class="footer-main">
         <div class="footer-logo-block">
-          <span class="logo-title">First Job Portal</span>
+          <span class="logo  -title">First Job Portal</span>
           <div class="footer-contact">
             <div class="call-us">Call us</div>
             <a class="phone" href="tel:1234567890">123 456 7890</a>
@@ -180,8 +225,8 @@
             <a href="#" class="footer-social" aria-label="Facebook"
               ><i class="fab fa-facebook-f"></i
             ></a>
-            <a href="#" class="footer-social" aria-label="Twitter"
-              ><i class="fab fa-twitter"></i
+            <a href="#" class="footer-social" aria-label="WhatsApp"
+              ><i class="fab fa-whatsapp" aria-hidden="true"></i
             ></a>
             <a href="#" class="footer-social" aria-label="Instagram"
               ><i class="fab fa-instagram"></i
@@ -214,12 +259,12 @@
 
     <style>
       .superio-footer {
-        background: #fff;
+        background: #fafcff;
         font-family: "Poppins", Arial, sans-serif;
         color: #222;
         padding: 0;
         margin: 0;
-        border-top: 1px solid #f0f0f0;
+        border-top: 1px solid #f0f0f0d3;
       }
       .footer-main {
         display: flex;
@@ -401,6 +446,74 @@
           margin-top: 10px;
         }
       }
+      /* @media (max-width: 400px) {
+       .call-us {
+        font-size: 1.5rem;
+       }
+       .phone {
+        font-size: 1.4rem;
+        margin-bottom: 25px;
+       }
+      .address,
+      .email {
+        font-size: 1.1rem;
+        color: #555;
+        margin-right: -50px;
+      }
+      .footer-section {
+        margin-top: -20px;
+      }
+      .footer-title {
+        font-size: 1.3rem;
+      }
+      .footer-section ul {
+        font-size: 1rem;
+      }
+      .footer-bottom {
+        padding-left: 50px;
+      }
+      .footer-socials {
+        padding-left: 70px;
+      }
+      .scroll-to-top {
+        margin-left: 70px;
+      }
+
+      }
+      @media (max-width: 360px) {
+       .call-us {
+        font-size: 1.5rem;
+       }
+       .phone {
+        font-size: 1.4rem;
+        margin-bottom: 25px;
+       }
+      .address,
+      .email {
+        font-size: 1.1rem;
+        color: #555;
+        margin-right: -90px;
+      }
+      .footer-section {
+        margin-top: -20px;
+      }
+      .footer-title {
+        font-size: 1.3rem;
+      }
+      .footer-section ul {
+        font-size: 1rem;
+      }
+      .footer-bottom {
+        padding-left: 50px;
+      }
+      .footer-socials {
+        padding-left: 70px;
+      }
+      .scroll-to-top {
+        margin-left: 70px;
+      }
+
+      } */
     </style>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
@@ -424,6 +537,7 @@
         scrollBtn.style.pointerEvents = "none";
       });
     </script>
-    <script src="FAQ's.js"></script>
+
+  <script src="candidate.js"></script>
 </body>
 </html>
