@@ -307,7 +307,6 @@ a {
 @media (max-width: 993px) {
     .header-container {
         flex-wrap: wrap;
-        height: 50px;
     }
     
     .nav-menu {
