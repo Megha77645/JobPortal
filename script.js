@@ -1,18 +1,54 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-    const menu = document.querySelector('.menu');
-    const files = document.querySelector('.files');
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('navMenu');
+    const dropdownToggles = document.querySelectorAll('.pages-dropdown-toggle');
     
-    mobileMenuBtn.addEventListener('click', function() {
-        menu.classList.toggle('active');
-        files.classList.toggle('active');
-        
-        // Change icon between hamburger and X
-        if (menu.classList.contains('active')) {
-            this.innerHTML = '<i class="fas fa-times"></i>';
-        } else {
-            this.innerHTML = '<i class="fas fa-bars"></i>';
+    // Toggle mobile menu
+    hamburger.addEventListener('click', function() {
+        navMenu.classList.toggle('active');
+    });
+    
+    // Handle dropdowns on mobile
+    dropdownToggles.forEach(toggle => {
+        toggle.addEventListener('click', function(e) {
+            if (window.innerWidth <= 992) {
+                e.preventDefault();
+                const dropdown = this.parentElement;
+                dropdown.classList.toggle('active');
+                
+                // Close other open dropdowns
+                dropdownToggles.forEach(otherToggle => {
+                    if (otherToggle !== toggle) {
+                        otherToggle.parentElement.classList.remove('active');
+                    }
+                });
+            }
+        });
+    });
+    
+    // Close menu when clicking outside on mobile
+    document.addEventListener('click', function(e) {
+        if (window.innerWidth <= 992 && navMenu.classList.contains('active')) {
+            if (!e.target.closest('.header-container') && !e.target.closest('.hamburger')) {
+                navMenu.classList.remove('active');
+                
+                // Close all dropdowns
+                dropdownToggles.forEach(toggle => {
+                    toggle.parentElement.classList.remove('active');
+                });
+            }
         }
+    });
+    
+    // Close dropdowns when clicking a link
+    const dropdownLinks = document.querySelectorAll('.pages-dropdown-content a');
+    dropdownLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            if (window.innerWidth <= 992) {
+                navMenu.classList.remove('active');
+                this.closest('.pages-dropdown').classList.remove('active');
+            }
+        });
     });
 });
 
