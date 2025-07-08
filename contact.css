@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,700&display=swap');
-
 body {
     font-family: 'Montserrat', Arial, sans-serif;
     background: #fff;
@@ -8,32 +7,42 @@ body {
     padding: 0;
 }
 
-
 #navbar-placeholder,
 
 
 #footer-placeholder {
     width: 100%;
 }
-
-/* Map Section */
+.map-section{
+    width: 100%;
+    padding-top: 55px;
+    height: 500px;
+    min-width: 100%;
+}
+.map-section iframe{
+    height: 100%;
+    width: 100%;
+    min-width: 90%;
+}
+/* 
+Map Section
 .map-section {
-    width: 100vw;
+    width: 100%;
     min-height: 350px;
-    height: 42vw;
+    height: 42vh;
     max-height: 480px;
     overflow: hidden;
     position: relative;
 }
 
 .map-section iframe {
-    width: 100vw;
+    width: 100%;
     min-height: 350px;
     height: 42vw;
     max-height: 480px;
     border: none;
     display: block;
-}
+} */
 
 /* Contact Info Cards */
 .contact-info {
@@ -215,12 +224,12 @@ button[type="submit"]:focus {
 }
 
 @media (max-width: 600px) {
-    .map-section,
+    /* .map-section,
     .map-section iframe {
         min-height: 190px;
         height: 35vw;
         max-height: 220px;
-    }
+    } */
     .contact-form-section {
         padding: 18px 0 30px 0;
     }
@@ -251,7 +260,7 @@ button[type="submit"]:focus {
     }
 }
 
-@media (max-width: 400px) {
+/* @media (max-width: 400px) {
     .map-section,
     .map-section iframe {
         min-height: 120px;
@@ -264,4 +273,4 @@ button[type="submit"]:focus {
     #contact-form {
         padding: 6px 2px 6px 2px;
     }
-}
+} */
