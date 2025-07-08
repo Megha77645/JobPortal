@@ -385,3 +385,25 @@ document.addEventListener("DOMContentLoaded", function () {
 
         setInterval(slide, 5000);
       });
+
+//Footer js
+document.addEventListener("DOMContentLoaded", function () {
+  var scrollBtn = document.getElementById("scrollTopBtn");
+  window.addEventListener("scroll", function () {
+    if (window.scrollY > 200) {
+      scrollBtn.style.opacity = "1";
+      scrollBtn.style.pointerEvents = "auto";
+    } else {
+      scrollBtn.style.opacity = "0";
+      scrollBtn.style.pointerEvents = "none";
+    }
+  });
+  scrollBtn.addEventListener("click", function () {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
+  scrollBtn.style.opacity = "0";
+  scrollBtn.style.pointerEvents = "none";
+});
