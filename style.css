@@ -1400,7 +1400,7 @@ body.modal-open .featured-jobs-section {
   }
   @media (max-width: 440px){
     .superio-footer{
-      width: 440px;
+      width: 100%;
     }
   }
   /* @media (max-width: 400px) {
