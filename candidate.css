@@ -37,7 +37,6 @@ ul { list-style: none; }
   gap: 32px;
   height: fit-content;
   margin-right: 0;
-  margin-left: -20px;
   position: relative;
   left: 0;
   min-width: 0;
