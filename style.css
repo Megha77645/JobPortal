@@ -123,8 +123,7 @@ img{
 @keyframes fadesUp{
     from { opacity: 0; transform: translateY(20px);}
     to { opacity: 1; transform: translateY(0);}
-}
-header {
+}header {
     z-index: 100;
     position: fixed;
     width: 100%;
@@ -184,7 +183,6 @@ a {
 .files {
     margin: 0 8px;
 }
-
 .access a {
     color: rgb(40, 104, 243);
 }
@@ -236,8 +234,8 @@ a {
 .pages-dropdown-content {
     display: none;
     position: absolute;
-    top: 100%;
-    left: 0;
+    right: -50px;
+    padding-top: 25px;
     min-width: 180px;
     background-color: white;
     border-radius: 5px;
@@ -293,47 +291,53 @@ a {
     }
 }
 
-/* Responsive Styles */
-@media (max-width: 1201px) {    
-    .header-buttons {
-        margin-left: 0;
-        margin-top: 10px;
-        width: 100%;
-        justify-content: center;
-    }
-}
-
-@media (max-width: 993px) {
-    .header-container {
-        flex-wrap: wrap;
+@media(max-width: 950px){
+  .header-container {
+      flex-wrap: wrap;  
     }
     
-    .nav-menu {
-        display: none;
-        width: 100%;
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 20px 0;
+  .hamburger{
+    display: block;
+  }
+  .nav-menu {
+    display: none;
+    width: 100%;
+    gap: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px 0;
     }
-    
-    .nav-menu.active {
-        display: flex;
-    }
-    
-    .menu {
-        margin: 10px 0;
-        width: 100%;
-    }
-    
+  .nav-menu.active {
+    display: flex;
+    flex-direction: column;
+  }
+  .header-buttons{
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 0px;
+    align-items: start;
+  }
+  .access{
+    height: 25px;
+    width: 80px;
+    text-align: center;
+    padding: 10px 20px;
+  }
     .pages-dropdown {
-        width: 100%;
+     width: 80px;
     }
     
     .pages-dropdown-content {
         position: static;
         box-shadow: none;
+        padding-left: 0px;
         animation: none;
         display: none;
+    }
+    .pages-dropdown-content a{
+      padding: 0px;
+      padding-top: 10px;
     }
     
     .pages-dropdown:hover .pages-dropdown-content {
@@ -342,38 +346,6 @@ a {
     
     .pages-dropdown.active .pages-dropdown-content {
         display: block;
-    }
-    
-    .header-buttons {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        margin-top: 20px;
-    }
-    
-    .files {
-        margin: 5px 0;
-        max-width: 20%;
-    }
-    
-    .access, .job-post {
-        width: 100%;
-        text-align: left;
-        padding: 10px 15px;
-    }
-    
-    .hamburger {
-        display: block;
-    }
-}
-
-@media (max-width: 576px) {
-    .logo {
-        font-size: 20px;
-    }
-    
-    .header-container {
-        padding: 10px 15px;
     }
 }
 
