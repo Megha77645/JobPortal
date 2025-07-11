@@ -35,6 +35,9 @@ img{
     background-color: rgb(14, 85, 228);
     color: white;
 }
+.side > button > a{
+  color: white;
+}
 .side > button:hover{
     background-color: rgb(3, 60, 174);
 }
