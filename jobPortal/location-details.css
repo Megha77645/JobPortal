@@ -1,6 +1,7 @@
 body {
   margin: 0;
-  font-family: 'Segoe UI', Arial, sans-serif;
+  /* font-family: 'Segoe UI', Arial, sans-serif; */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: #fff;
   color: #222;
 }
@@ -197,7 +198,7 @@ button:active {
   }
   .location-header {
     margin-bottom: 40px;
-    margin-top: 40px;s
+    margin-top: 40px;
   }
   .main-heading {
     font-size: 1.4rem;

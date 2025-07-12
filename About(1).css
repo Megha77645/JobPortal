@@ -3,7 +3,8 @@
   background: linear-gradient(135deg, #f3f6fb, #e6effc);
   text-align: center;
   padding: 60px 20px;
-  font-family: Arial, sans-serif;
+  /* font-family: Arial, sans-serif; */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin-top: 55px;
    width: 100vw; 
   

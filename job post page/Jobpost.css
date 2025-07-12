@@ -1,7 +1,8 @@
 /* page 1 form */
 
 body {
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  /* font-family: 'Segoe UI', sans-serif; */
   background-color: #e8f3fa;
   padding: 20px;
   margin: 0;
@@ -18,7 +19,7 @@ body {
 h2 {
   text-align: center;
   color: #000000;
-  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  /* font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
   margin-top: -5px;
     font-size: 30px;
 }
@@ -27,7 +28,7 @@ form label {
   display: block;
   margin-top: 15px;
   margin-bottom: 6px;
-  font-family: Arial, Helvetica, sans-serif;
+  /* font-family: Arial, Helvetica, sans-serif; */
   font-weight: 600;
   font-size: 20px;
   color: #000000;
@@ -139,7 +140,7 @@ input[type="text"] {
 .label {
   font-size: 18px;
   font-weight: 600;
-  font-family:Arial, Helvetica, sans-serif;
+  /* font-family:Arial, Helvetica, sans-serif; */
   color: #000000;
   margin-top: 8px;
   display: block;
