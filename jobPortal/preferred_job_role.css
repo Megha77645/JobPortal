@@ -89,9 +89,9 @@ body {
 }
 
 .role-chip {
-  background: #eaf6f2;
-  border: 1.5px solid #228364;
-  color: #228364;
+  background: #629bd14c;
+  border: 1.5px solid  #07398b;
+  color:  #07398b;
   padding: 7px 16px 7px 14px;
   border-radius: 20px;
   font-size: 1.03rem;
@@ -104,7 +104,7 @@ body {
 .role-remove {
   background: none;
   border: none;
-  color: #228364;
+  color:  #07398b;
   font-size: 1rem;
   margin-left: 7px;
   cursor: pointer;
@@ -149,14 +149,14 @@ body {
   content: '+';
   margin-left: 8px;
   font-size: 1.1em;
-  color: #228364;
+  color:  #07398b;
   font-weight: bold;
 }
 
 .suggested-btn:hover {
-  border: 1.5px solid #228364;
+  border: 1.5px solid #07398b;
   background: #eaf6f2;
-  color: #228364;
+  color: #07398b;
 }
 
 .card-footer {

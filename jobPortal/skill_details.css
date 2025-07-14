@@ -89,9 +89,9 @@ body {
 }
 
 .skill-chip {
-  background: #eaf6f2;
-  border: 1.5px solid #228364;
-  color: #228364;
+  background: #629bd14c;
+  border: 1.5px solid #07398b;
+  color: #07398b;
   padding: 7px 16px 7px 14px;
   border-radius: 20px;
   font-size: 1.03rem;
@@ -104,7 +104,7 @@ body {
 .skill-remove {
   background: none;
   border: none;
-  color: #228364;
+  color: #07398b;
   font-size: 1rem;
   margin-left: 7px;
   cursor: pointer;
@@ -144,9 +144,9 @@ body {
 }
 
 .suggested-btn:hover {
-  border: 1.5px solid #228364;
-  background: #eaf6f2;
-  color: #228364;
+  border: 1.5px solid #07398b;
+  background: #629bd14c;
+  color: #07398b;
 }
 
 .card-footer {
@@ -158,7 +158,7 @@ body {
 .next-btn {
   width: 100%;
   padding: 16px 0;
-  background: #228364;
+  background:  #1665e3;
   color: #fff;
   border: none;
   border-radius: 8px;
@@ -170,7 +170,7 @@ body {
 }
 
 .next-btn:hover {
-  background: #196e52;
+  background: #07398b;
 }
 
 @media (max-width: 600px) {

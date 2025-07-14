@@ -21,7 +21,7 @@ body{
     border-radius: 5px;
     height: 40px;
     width: 90%;
-    background-color:#228364;
+    background-color:#1665e3;
     margin-top: 20px;
     margin-left: 20px;
     margin-right: 20px;
@@ -30,7 +30,7 @@ body{
     border: 0px;
 }
 .resume-btn:hover{
-    background: #165541;
+    background: #07398b;
 }
 #file{
     font-size: 15px;

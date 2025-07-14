@@ -17,6 +17,7 @@ body {
     height: 570px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     width: 500px;
+    border-radius: 25px;
 }
 
 .login-head h1{

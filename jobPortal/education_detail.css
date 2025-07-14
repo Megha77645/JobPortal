@@ -73,7 +73,7 @@ body {
       margin-top: 30px;
       width: 100%;
       padding: 12px;
-      background: #1d7f74;
+      background: #1665e3;
       color: white;
       border: none;
       border-radius: 6px;
@@ -82,7 +82,7 @@ body {
     }
 
     .submit-btn:hover {
-      background: #145f58;
+      background: #07398b;
     }
     .option-group label{
       font-size: 12px;

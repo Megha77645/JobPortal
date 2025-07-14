@@ -86,12 +86,12 @@ button {
   transition: background 0.2s, color 0.2s;
 }
 button.outlined {
-  border: 2px solid #0c4735;
+  border: 2px solid #07398b;
   background: #fff;
   color: #2176ff;
 }
 button.primary {
-  background: #228364;
+  background: #1665e3;
   color: #fff;
   border: none;
   display: flex;
