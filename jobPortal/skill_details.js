@@ -161,7 +161,7 @@ function closeAutocomplete() {
 // Handle skill input (add on Enter, filter suggested, show tech skills)
 skillsInput.addEventListener('keydown', function(e) {
   if (e.key === 'Enter') {
-    const value = skillInput.value.trim();
+    const value = skillsInput.value.trim();
     if (value && !selectedSkills.includes(value)) {
       selectedSkills.push(value);
       skillsInput.value = '';
@@ -173,7 +173,7 @@ skillsInput.addEventListener('keydown', function(e) {
 });
 
 skillsInput.addEventListener('input', function() {
-  const value = skillInput.value.trim().toLowerCase();
+  const value = skillsInput.value.trim().toLowerCase();
   // Filter suggested skills section
   if (!value) {
     renderSuggested();
