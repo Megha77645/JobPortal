@@ -66,10 +66,6 @@
   </div>
 
   <div class="container">
-    <!-- Mobile filter button (hidden on desktop) -->
-    <button class="mobile-filter-btn" id="openFilterBtn">
-      &#x1F50D; Filter
-    </button>
     <!-- Overlay for mobile filter -->
     <div class="mobile-filter-overlay" id="filterOverlay"></div>
     <!-- Sidebar Filters -->
@@ -83,7 +79,7 @@
         <span class="filter-title">Location</span>
         <input type="text" id="locationInput" class="filter-input" placeholder="City or postcode">
         <span class="range-label">Radius around selected destination</span>
-        <input type="range" id="radiusInput" min="0" max="200" value="100" step="10" style="width:100%;">
+        <input type="range" id="radiusInput" min="0" max="200" value="100" step="10" style="width:100%; height: 4px;" >
         <span class="range-value" id="radiusValue">100km</span>
       </div>
       <div class="filter-group">
@@ -140,6 +136,9 @@
     <main class="main-content">
       <div class="candidates-list-header">
         <span class="jobs-count" id="jobsCount">0 jobs</span>
+              <button id="openFilterBtn" class="mobile-filter-btn" aria-label="Show filters">
+    <i class="fas fa-sliders-h"></i> Filter
+  </button>
         <div class="sort-group">
           <select id="sortSelect">
             <option value="">Sort by (default)</option>

@@ -143,13 +143,44 @@ const candidates = [
     rate: 133,
     featured: true,
     gender: "Female",
-    postedHoursAgo: 1,
+    postedHoursAgo: 30,
     experience: "4",
     qualification: "Doctorate Degree",
     category: "Design",
     tags: ["Design", "Leadership", "UI/UX"],
     avatar: "https://media.istockphoto.com/id/2212029392/photo/head-shot-of-employee-posing-in-boardroom.jpg?s=612x612&w=0&k=20&c=5hr4yQmzVEHEuAEe5JFUVqRByuzYNpckJlx7IYgJxes=",
   },
+  {
+    id: 11,
+    name: "Marry Smithson",
+    role: "Web Designer",
+    location: "London, UK",
+    rate: 120,
+    featured: false,
+    gender: "Female",
+    postedHoursAgo: 1,
+    experience: "5",
+    qualification: "Bachelor Degree",
+    category: "Design",
+    tags: ["Web", "Design", "Creative"],
+    avatar: "https://d34u8crftukxnk.cloudfront.net/slackpress/prod/sites/6/IQ-Accountants-managing-partner-Kyelie-Baxter-Slack-customer-story.jpg",
+  },
+  {
+    id: 12,
+    name: "John Doe",
+    role: "Graphic Designer",
+    location: "London, UK",
+    rate: 100,
+    featured: true,
+    gender: "male",
+    postedHoursAgo: 12,
+    experience: "6",
+    qualification: "Master's Degree",
+    category: "Design",
+    tags: ["Graphic", "Design", "Creative"],
+    avatar: "https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+  },
+
 ];
 
 // DOM Elements
@@ -310,3 +341,4 @@ qualificationGroup.addEventListener('change', renderCandidates);
 
 // Initial Render
 renderCandidates();
+
