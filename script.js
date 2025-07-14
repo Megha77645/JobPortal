@@ -1,55 +1,55 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const hamburger = document.getElementById('hamburger');
-    const navMenu = document.getElementById('navMenu');
-    const dropdownToggles = document.querySelectorAll('.pages-dropdown-toggle');
-    
-    // Toggle mobile menu
-    hamburger.addEventListener('click', function() {
-        navMenu.classList.toggle('active');
-    });
-    
-    // Handle dropdowns on mobile
-    dropdownToggles.forEach(toggle => {
-        toggle.addEventListener('click', function(e) {
-            if (window.innerWidth <= 992) {
-                e.preventDefault();
-                const dropdown = this.parentElement;
-                dropdown.classList.toggle('active');
-                
-                // Close other open dropdowns
-                dropdownToggles.forEach(otherToggle => {
-                    if (otherToggle !== toggle) {
-                        otherToggle.parentElement.classList.remove('active');
-                    }
-                });
-            }
+document.addEventListener('DOMContentLoaded', function () {
+  const hamburger = document.getElementById('hamburger');
+  const navMenu = document.getElementById('navMenu');
+  const dropdownToggles = document.querySelectorAll('.pages-dropdown-toggle');
+
+  // Toggle mobile menu
+  hamburger.addEventListener('click', function () {
+    navMenu.classList.toggle('active');
+  });
+
+  // Handle dropdowns on mobile
+  dropdownToggles.forEach(toggle => {
+    toggle.addEventListener('click', function (e) {
+      if (window.innerWidth <= 992) {
+        e.preventDefault();
+        const dropdown = this.parentElement;
+        dropdown.classList.toggle('active');
+
+        // Close other open dropdowns
+        dropdownToggles.forEach(otherToggle => {
+          if (otherToggle !== toggle) {
+            otherToggle.parentElement.classList.remove('active');
+          }
         });
+      }
     });
-    
-    // Close menu when clicking outside on mobile
-    document.addEventListener('click', function(e) {
-        if (window.innerWidth <= 992 && navMenu.classList.contains('active')) {
-            if (!e.target.closest('.header-container') && !e.target.closest('.hamburger')) {
-                navMenu.classList.remove('active');
-                
-                // Close all dropdowns
-                dropdownToggles.forEach(toggle => {
-                    toggle.parentElement.classList.remove('active');
-                });
-            }
-        }
-    });
-    
-    // Close dropdowns when clicking a link
-    const dropdownLinks = document.querySelectorAll('.pages-dropdown-content a');
-    dropdownLinks.forEach(link => {
-        link.addEventListener('click', function() {
-            if (window.innerWidth <= 992) {
-                navMenu.classList.remove('active');
-                this.closest('.pages-dropdown').classList.remove('active');
-            }
+  });
+
+  // Close menu when clicking outside on mobile
+  document.addEventListener('click', function (e) {
+    if (window.innerWidth <= 992 && navMenu.classList.contains('active')) {
+      if (!e.target.closest('.header-container') && !e.target.closest('.hamburger')) {
+        navMenu.classList.remove('active');
+
+        // Close all dropdowns
+        dropdownToggles.forEach(toggle => {
+          toggle.parentElement.classList.remove('active');
         });
+      }
+    }
+  });
+
+  // Close dropdowns when clicking a link
+  const dropdownLinks = document.querySelectorAll('.pages-dropdown-content a');
+  dropdownLinks.forEach(link => {
+    link.addEventListener('click', function () {
+      if (window.innerWidth <= 992) {
+        navMenu.classList.remove('active');
+        this.closest('.pages-dropdown').classList.remove('active');
+      }
     });
+  });
 });
 
 const jobs = [
@@ -198,7 +198,7 @@ const jobs = [
     title: "UI/UX Designer",
     company: "Figma",
     location: "London, UK",
-    logo:  "https://assets.toptal.io/images?url=https%3A%2F%2Fbs-uploads.toptal.io%2Fblackfish-uploads%2Fcomponents%2Fskill_page%2F34403%2Flogo%2Foptimized%2Fui-24b9a12e4e385375647fd19e9b5ebc2d.png",
+    logo: "https://assets.toptal.io/images?url=https%3A%2F%2Fbs-uploads.toptal.io%2Fblackfish-uploads%2Fcomponents%2Fskill_page%2F34403%2Flogo%2Foptimized%2Fui-24b9a12e4e385375647fd19e9b5ebc2d.png",
     time: "10 hours ago",
     posted: "Posted 30 minutes ago",
     expiration: "July 15, 2025",
@@ -330,11 +330,22 @@ function renderJobModal(job) {
   `;
 }
 
+function findJobs() {
+  const jobTitle = document.getElementById('jobTitle').value.trim();
+  const city = document.getElementById('city').value.trim();
+
+  // Encode the values to safely include in URL
+  const queryString = `?job=${encodeURIComponent(jobTitle)}&city=${encodeURIComponent(city)}`;
+
+  // Redirect with parameters
+  window.location.href = 'findjob.html' + queryString;
+}
+
 function setupModalLogic() {
   const overlay = document.getElementById('jobModalOverlay');
   const closeBtn = document.getElementById('modalCloseBtn');
   const content = document.getElementById('modalContent');
-  document.getElementById('jobsGrid').addEventListener('click', function(e) {
+  document.getElementById('jobsGrid').addEventListener('click', function (e) {
     let card = e.target.closest('.job-card');
     if (card) {
       const jobId = +card.getAttribute('data-id');
@@ -357,7 +368,7 @@ function setupModalLogic() {
 document.addEventListener('DOMContentLoaded', () => {
   renderJobCards();
   setupModalLogic();
-});2
+}); 2
 
 
 
@@ -368,23 +379,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
 //Feedback Akanksha
 document.addEventListener("DOMContentLoaded", function () {
-        const row = document.querySelector(".feedback-row");
-        const containers = document.querySelectorAll(".feedback-container");
-        const gap = 20;
-        let index = 0;
+  const row = document.querySelector(".feedback-row");
+  const containers = document.querySelectorAll(".feedback-container");
+  const gap = 20;
+  let index = 0;
 
-        function slide() {
-          const screenWidth = window.innerWidth;
-          const showCount = screenWidth <= 768 ? 1 : 2;
-          const itemWidth = containers[0].offsetWidth + gap;
-          const maxIndex = containers.length - showCount;
+  function slide() {
+    const screenWidth = window.innerWidth;
+    const showCount = screenWidth <= 768 ? 1 : 2;
+    const itemWidth = containers[0].offsetWidth + gap;
+    const maxIndex = containers.length - showCount;
 
-          index = index + showCount > maxIndex ? 0 : index + showCount;
-          row.style.transform = `translateX(-${index * itemWidth}px)`;
-        }
+    index = index + showCount > maxIndex ? 0 : index + showCount;
+    row.style.transform = `translateX(-${index * itemWidth}px)`;
+  }
 
-        setInterval(slide, 5000);
-      });
+  setInterval(slide, 5000);
+});
 
 //Footer js
 document.addEventListener("DOMContentLoaded", function () {

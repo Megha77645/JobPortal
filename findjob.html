@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Job Portal UI - LinkedIn Style</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-  />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link rel="stylesheet" href="style.css">
   <style>
     body {
@@ -17,6 +15,7 @@
       background: #fbfcfd;
       color: #181818;
     }
+
     .jp-header-gradient {
       width: 100%;
       background: linear-gradient(135deg, #f3f6fb, #e6effc);
@@ -24,6 +23,7 @@
       box-sizing: border-box;
       padding-top: 120px;
     }
+
     .jp-header-content {
       width: 100%;
       max-width: 1170px;
@@ -34,17 +34,20 @@
       padding: 0 20px;
       box-sizing: border-box;
     }
+
     .jp-header-content h1 {
       margin: 0;
       font-size: 1.9rem;
       font-weight: 600;
       font-family: 'Inter', Arial, sans-serif;
     }
+
     .jp-header-content .breadcrumb {
       font-size: 1rem;
       color: #555;
       margin-top: 10px;
     }
+
     .jp-container {
       display: flex;
       width: 100%;
@@ -55,6 +58,7 @@
       box-sizing: border-box;
       gap: 30px;
     }
+
     .jp-sidebar {
       width: 420px;
       max-width: 100vw;
@@ -68,6 +72,7 @@
       margin-left: 0;
       box-sizing: border-box;
     }
+
     .jp-sidebar .jp-card {
       background: #f7faff;
       box-shadow: none;
@@ -75,16 +80,20 @@
       padding: 18px 20px;
       margin: 0;
     }
+
     .jp-section-title {
       display: block;
       font-weight: 600;
       margin-bottom: 10px;
     }
+
     .jp-input-group {
       position: relative;
       margin-bottom: 10px;
     }
-    .jp-input-group input, .jp-input-group select {
+
+    .jp-input-group input,
+    .jp-input-group select {
       width: 100%;
       padding: 12px 40px 12px 16px;
       border: 1px solid #e6edf7;
@@ -93,10 +102,14 @@
       outline: none;
       box-sizing: border-box;
     }
+
     .jp-input-group select {
       cursor: pointer;
     }
-    .jp-input-group .jp-icon-search, .jp-input-group .jp-icon-location, .jp-input-group .jp-icon-briefcase {
+
+    .jp-input-group .jp-icon-search,
+    .jp-input-group .jp-icon-location,
+    .jp-input-group .jp-icon-briefcase {
       position: absolute;
       right: 20px;
       top: 50%;
@@ -104,21 +117,25 @@
       color: #bbbbbb;
       font-size: 1em;
     }
+
     .jp-slider-label {
       margin: 7px 0 3px 0;
       font-size: 0.95em;
       color: #555;
     }
+
     .jp-slider-group {
       display: flex;
       align-items: center;
       gap: 10px;
       margin: 7px 0 0 0;
     }
+
     .jp-slider-group input[type="range"] {
       flex: 1;
       height: 4px;
     }
+
     .jp-slider-group span {
       padding: 3px 10px;
       background: #eaf1fc;
@@ -126,27 +143,34 @@
       border-radius: 8px;
       font-size: 0.98em;
     }
-    .jp-checkbox-group, .jp-radio-group {
+
+    .jp-checkbox-group,
+    .jp-radio-group {
       display: flex;
       flex-direction: column;
       gap: 7px;
       font-size: 13px;
     }
-    .jp-checkbox-group label, .jp-radio-group label {
+
+    .jp-checkbox-group label,
+    .jp-radio-group label {
       cursor: pointer;
       user-select: none;
     }
+
     .jp-view-more {
       color: #2476fe;
       cursor: pointer;
       font-size: 0.98em;
       margin-left: 5px;
     }
+
     .jp-tag-group {
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
     }
+
     .jp-tag {
       background: #f3f7fe;
       color: #4580f7;
@@ -154,6 +178,7 @@
       border-radius: 7px;
       font-size: 0.84em;
     }
+
     .jp-recruiting-card {
       background: #f3f7fe;
       display: flex;
@@ -161,9 +186,11 @@
       justify-content: space-between;
       margin-top: 16px;
     }
+
     .jp-recruiting-content {
       flex: 1;
     }
+
     .jp-btn-primary {
       background: #2476fe;
       color: #fff;
@@ -174,11 +201,13 @@
       cursor: pointer;
       margin-top: 10px;
     }
+
     .jp-main-content {
       flex: 1;
       padding-top: 30px;
       min-width: 0;
     }
+
     .jp-main-controls {
       display: flex;
       justify-content: space-between;
@@ -187,11 +216,13 @@
       flex-wrap: wrap;
       gap: 15px;
     }
+
     .jp-main-dropdowns {
       display: flex;
       gap: 14px;
       flex-wrap: wrap;
     }
+
     .jp-main-dropdowns select {
       padding: 7px 20px;
       border-radius: 7px;
@@ -200,11 +231,13 @@
       font-size: 0.86em;
       outline: none;
     }
+
     .jp-job-list {
       display: flex;
       flex-direction: column;
       gap: 22px;
     }
+
     .jp-job-card {
       display: flex;
       align-items: flex-start;
@@ -218,10 +251,12 @@
       border: 1px solid #f0f1f7;
       min-width: 0;
     }
+
     .jp-job-card:hover {
       box-shadow: 0 6px 32px rgba(36, 118, 254, 0.08);
       border: 1.5px solid #d9e9ff;
     }
+
     .jp-job-logo {
       width: 48px;
       height: 48px;
@@ -234,24 +269,28 @@
       overflow: hidden;
       flex-shrink: 0;
     }
+
     .jp-logo-img {
       width: 100%;
       height: 95%;
       object-fit: contain;
       border-radius: 9px;
     }
+
     .jp-job-info {
       flex: 1;
       display: flex;
       flex-direction: column;
       min-width: 0;
     }
+
     .jp-job-title {
       font-size: 1em;
       font-weight: 600;
       margin-bottom: 10px;
       word-break: break-word;
     }
+
     .jp-job-meta {
       display: flex;
       align-items: center;
@@ -261,34 +300,66 @@
       margin-bottom: 14px;
       flex-wrap: wrap;
     }
+
     .jp-job-meta span {
       display: flex;
       align-items: center;
       gap: 4px;
     }
+
     .jp-job-badges {
       display: flex;
       gap: 18px;
       margin-bottom: 0;
       flex-wrap: wrap;
     }
+
     .jp-badge {
       font-size: 0.8em;
       padding: 3px 10px;
       border-radius: 8px;
-      color: #1967d2 ;
+      color: #1967d2;
       font-weight: 400;
       background: #2476fe;
       opacity: 0.91;
     }
-    .jp-badge.full-time { background: rgba(25,103,210,.15); }
-    .jp-badge.freelancer { background: rgba(25,103,210,.15); }
-    .jp-badge.temporary { background: rgba(25,103,210,.15); }
-    .jp-badge.part-time { background: rgba(25,103,210,.15); }
-    .jp-badge.private { background: #dff8f4; color: #2d7063;}
-    .jp-badge.urgent { background: #fff8e1; color: #835800;}
-    .jp-badge.temp { background: #c1e1fc; color: #3074b5; }
-    .jp-badge.default { background: #f1f2f6; color: #333; }
+
+    .jp-badge.full-time {
+      background: rgba(25, 103, 210, .15);
+    }
+
+    .jp-badge.freelancer {
+      background: rgba(25, 103, 210, .15);
+    }
+
+    .jp-badge.temporary {
+      background: rgba(25, 103, 210, .15);
+    }
+
+    .jp-badge.part-time {
+      background: rgba(25, 103, 210, .15);
+    }
+
+    .jp-badge.private {
+      background: #dff8f4;
+      color: #2d7063;
+    }
+
+    .jp-badge.urgent {
+      background: #fff8e1;
+      color: #835800;
+    }
+
+    .jp-badge.temp {
+      background: #c1e1fc;
+      color: #3074b5;
+    }
+
+    .jp-badge.default {
+      background: #f1f2f6;
+      color: #333;
+    }
+
     .jp-bookmark {
       position: absolute;
       top: 26px;
@@ -298,9 +369,11 @@
       cursor: pointer;
       transition: color 0.15s;
     }
+
     .jp-bookmark.jp-saved {
       color: #2476fe;
     }
+
     .jp-job-desc-heading {
       font-size: 1em;
       margin-top: 20px;
@@ -308,26 +381,31 @@
       font-weight: 700;
       color: black;
     }
-    .jp-recruiting-subtext{
+
+    .jp-recruiting-subtext {
       font-size: 0.95em;
       color: #555;
       margin-top: 15px;
     }
+
     .jp-job-responsibilities {
       font-size: 1.05em;
       line-height: 1.8em;
       color: #333;
       margin-bottom: 20px;
     }
+
     .jp-job-responsibilities ul {
       padding-left: 20px;
       margin: 0;
     }
+
     .jp-job-responsibilities li {
       margin-bottom: 10px;
       list-style: disc;
       font-size: 0.89em;
     }
+
     .jp-modal-social-icons a {
       padding: 6px 10px;
       font-size: 14px;
@@ -339,28 +417,35 @@
       margin: 5px 10px 5px 0;
       text-decoration: none;
     }
+
     .jp-modal-social-icons a.linkedin {
       background: #0077b5;
     }
+
     .jp-modal-social-icons a.Whatsapp {
       background: #1bbe5f;
     }
+
     .jp-modal-social-icons a.facebook {
       background: #3b5998;
     }
+
     /* Modal Styles */
     .jp-modal {
       display: none;
       position: fixed;
       z-index: 10000;
-      left: 0; top: 0;
-      width: 100vw; height: 100vh;
+      left: 0;
+      top: 0;
+      width: 100vw;
+      height: 100vh;
       background: rgba(255, 255, 255, 0.2);
       backdrop-filter: blur(10px);
       -webkit-backdrop-filter: blur(10px);
       align-items: center;
       justify-content: center;
     }
+
     .jp-modal-content {
       background: #fff;
       border-radius: 15px;
@@ -368,15 +453,24 @@
       max-width: 95vw;
       padding: 20px 34px;
       position: relative;
-      box-shadow: 0 8px 32px rgba(36,118,254,0.09);
+      box-shadow: 0 8px 32px rgba(36, 118, 254, 0.09);
       animation: jp-modalIn .18s;
       margin-top: -10px;
       box-sizing: border-box;
     }
+
     @keyframes jp-modalIn {
-      from { transform: scale(0.97); opacity: 0; }
-      to { transform: scale(1); opacity: 1; }
+      from {
+        transform: scale(0.97);
+        opacity: 0;
+      }
+
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
     }
+
     .jp-close {
       position: absolute;
       right: 23px;
@@ -386,493 +480,570 @@
       cursor: pointer;
       font-weight: 600;
     }
+
     #jp-modal-job-content {
       font-size: 0.89em;
       margin-top: 18px;
     }
+
     #jp-modal-job-content .jp-job-title {
       margin-bottom: 8px;
     }
+
     #jp-modal-job-content .jp-job-meta {
       margin-bottom: 16px;
       flex-wrap: wrap;
     }
+
     #jp-modal-job-content .jp-job-badges {
       margin-bottom: 15px;
       flex-wrap: wrap;
     }
+
     #jp-modal-job-content .jp-job-description {
       color: #333;
       line-height: 1.7em;
     }
+
     ::-webkit-scrollbar {
       width: 8px;
       background: #f6f7fa;
     }
+
     ::-webkit-scrollbar-thumb {
       border-radius: 12px;
       background: #e2e7f0;
     }
 
-    
 
-/* Hide on desktop, show on mobile/tablet */
-.jp-filter-toggle {
-  display: none;
-}
 
-@media (max-width: 900px) {
-  .jp-main-controls {
-    position: relative;
-  }
-  .jp-filter-toggle {
-    display: inline-flex;
-    align-items: center;
-    margin-right: 10px;
-    padding: 7px 20px;
-    font-size: 0.86em;
-    background: #f7faff;
-    color: #181818;
-    border: 1px solid #e6edf7;
-    border-radius: 7px;
-    outline: none;
-    cursor: pointer;
-    height: 38px;
-    box-shadow: none;
-    transition: background 0.15s;
-    gap: 10px;
-  }
-  .jp-filter-toggle i {
-    margin-right: 5px;
-    font-size: 1em;
-  }
+    /* Hide on desktop, show on mobile/tablet */
+    .jp-filter-toggle {
+      display: none;
+    }
 
-  /* Responsive sidebar as drawer (same as previously provided) */
-  .jp-sidebar {
-    position: fixed;
-    top: 0; left: 0;
-    height: 100vh;
-    width: 85vw;
-    max-width: 360px;
-    background: linear-gradient(135deg, #f3f6fb, #e6effc);
-    box-shadow: 2px 0 16px rgba(36,118,254,0.13);
-    z-index: 12000;
-    transform: translateX(-110%);
-    transition: transform 0.23s cubic-bezier(.8,0,.2,1);
-    overflow-y: auto;
-    padding-top: 50px !important;
-  }
-  .jp-sidebar.open {
-    transform: translateX(0);
-  }
-  .jp-filter-close {
-    display: block;
-    position: absolute;
-    top: 12px;
-    right: 12px;
-    background: none;
-    border: none;
-    font-size: 2em;
-    color: #2476fe;
-    cursor: pointer;
-    z-index: 1;
-  }
-  body.jp-filter-active::before {
-    content: "";
-    position: fixed;
-    z-index: 11999;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(0,0,0,0.27);
-    pointer-events: auto;
-  }
-}
-/* By default, hide the close button */
-.jp-filter-close {
-  display: none;
-}
+    @media (max-width: 900px) {
+      .jp-main-controls {
+        position: relative;
+      }
 
-/* Show the close button only on mobile/tablet */
-@media (max-width: 900px) {
-  .jp-filter-close {
-    display: block;
-    position: absolute;
-    top: 12px;
-    right: 12px;
-    background: none;
-    border: none;
-    font-size: 2em;
-    color: #2476fe;
-    cursor: pointer;
-    z-index: 1;
-  }
-}
+      .jp-filter-toggle {
+        display: inline-flex;
+        align-items: center;
+        margin-right: 10px;
+        padding: 7px 20px;
+        font-size: 0.86em;
+        background: #f7faff;
+        color: #181818;
+        border: 1px solid #e6edf7;
+        border-radius: 7px;
+        outline: none;
+        cursor: pointer;
+        height: 38px;
+        box-shadow: none;
+        transition: background 0.15s;
+        gap: 10px;
+      }
+
+      .jp-filter-toggle i {
+        margin-right: 5px;
+        font-size: 1em;
+      }
+
+      /* Responsive sidebar as drawer (same as previously provided) */
+      .jp-sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 85vw;
+        max-width: 360px;
+        background: linear-gradient(135deg, #f3f6fb, #e6effc);
+        box-shadow: 2px 0 16px rgba(36, 118, 254, 0.13);
+        z-index: 12000;
+        transform: translateX(-110%);
+        transition: transform 0.23s cubic-bezier(.8, 0, .2, 1);
+        overflow-y: auto;
+        padding-top: 50px !important;
+      }
+
+      .jp-sidebar.open {
+        transform: translateX(0);
+      }
+
+      .jp-filter-close {
+        display: block;
+        position: absolute;
+        top: 12px;
+        right: 12px;
+        background: none;
+        border: none;
+        font-size: 2em;
+        color: #2476fe;
+        cursor: pointer;
+        z-index: 1;
+      }
+
+      body.jp-filter-active::before {
+        content: "";
+        position: fixed;
+        z-index: 11999;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.27);
+        pointer-events: auto;
+      }
+    }
+
+    /* By default, hide the close button */
+    .jp-filter-close {
+      display: none;
+    }
+
+    /* Show the close button only on mobile/tablet */
+    @media (max-width: 900px) {
+      .jp-filter-close {
+        display: block;
+        position: absolute;
+        top: 12px;
+        right: 12px;
+        background: none;
+        border: none;
+        font-size: 2em;
+        color: #2476fe;
+        cursor: pointer;
+        z-index: 1;
+      }
+    }
 
 
 
     /* RESPONSIVE DESIGN */
     @media (max-width: 1024px) {
-      .jp-header-content, .jp-container {
+
+      .jp-header-content,
+      .jp-container {
         max-width: 98vw;
         padding: 0 12px;
       }
+
       .jp-sidebar {
         width: 320px;
         padding: 14px;
       }
+
       .jp-modal-content {
         padding: 16px 9px;
         width: 98vw;
       }
     }
+
     @media (max-width: 900px) {
       .jp-container {
         flex-direction: column;
         gap: 0;
       }
+
       .jp-sidebar {
         width: 100%;
         margin: 0 0 32px 0;
         padding: 16px 10px;
       }
+
       .jp-main-content {
         padding-top: 0;
       }
+
       .jp-header-content {
         max-width: 100vw;
         padding: 0 7px;
       }
     }
+
     @media (max-width: 700px) {
       .jp-job-card {
         flex-direction: column;
         padding: 18px 13px;
         align-items: flex-start;
       }
+
       .jp-job-logo {
         margin-right: 0;
         margin-bottom: 14px;
       }
+
       .jp-job-meta {
         gap: 8px;
       }
+
       .jp-main-controls {
         flex-direction: column;
         align-items: flex-start;
         gap: 9px;
       }
+
       .jp-main-dropdowns {
         gap: 4px;
       }
     }
+
     @media (max-width: 600px) {
       .jp-header-content {
         padding: 0 4vw;
       }
-      .jp-sidebar, .jp-main-content {
+
+      .jp-sidebar,
+      .jp-main-content {
         padding: 5px 2vw;
       }
+
       .jp-modal-content {
         padding: 12px 1vw;
         width: 99vw;
       }
     }
+
     @media (max-width: 480px) {
       .jp-header-content h1 {
         font-size: 1.25rem;
       }
+
       .jp-sidebar {
         padding: 5px 1vw;
         gap: 14px;
       }
+
       .jp-job-card {
         padding: 10px 2vw;
         border-radius: 9px;
       }
+
       .jp-job-meta {
         font-size: 12px;
       }
-      .jp-job-title, .jp-job-desc-heading {
+
+      .jp-job-title,
+      .jp-job-desc-heading {
         font-size: 0.95em;
       }
+
       .jp-badge {
         font-size: 0.7em;
         padding: 2px 7px;
       }
+
       .jp-close {
         font-size: 1.25em;
         right: 7px;
         top: 7px;
-      }      
+      }
     }
 
-    
+
 
     /* Modal content styles */
-.jp-modal-content {
-  background: #fff;
-  border-radius: 20px;
-  width: 800px;
-  max-width: 95vw;
-  max-height: 90vh;
-  padding: 36px 36px 24px 36px;
-  position: relative;
-  box-shadow: 0 8px 32px rgba(36,118,254,0.09);
-  animation: jp-modalIn .18s;
-  margin: 0 auto;
-  overflow-y: auto;
-  /* Make the content scrollable if needed */
-  display: flex;
-  flex-direction: column;
-}
-@keyframes jp-modalIn {
-  from { transform: scale(0.97); opacity: 0; }
-  to { transform: scale(1); opacity: 1; }
-}
+    .jp-modal-content {
+      background: #fff;
+      border-radius: 20px;
+      width: 800px;
+      max-width: 95vw;
+      max-height: 90vh;
+      padding: 36px 36px 24px 36px;
+      position: relative;
+      box-shadow: 0 8px 32px rgba(36, 118, 254, 0.09);
+      animation: jp-modalIn .18s;
+      margin: 0 auto;
+      overflow-y: auto;
+      /* Make the content scrollable if needed */
+      display: flex;
+      flex-direction: column;
+    }
 
-.jp-close {
-  position: absolute;
-  right: 23px;
-  top: 20px;
-  font-size: 1.7em;
-  color: #888;
-  cursor: pointer;
-  font-weight: 600;
-  background: none;
-  border: none;
-  z-index: 1;
-}
+    @keyframes jp-modalIn {
+      from {
+        transform: scale(0.97);
+        opacity: 0;
+      }
 
-/* Scrollbar styles */
-.jp-modal-content::-webkit-scrollbar {
-  width: 8px;
-  background: #f6f7fa;
-}
-.jp-modal-content::-webkit-scrollbar-thumb {
-  border-radius: 12px;
-  background: #e2e7f0;
-}
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
 
-/* Modal job content styles */
-#jp-modal-job-content {
-  font-size: 1em;
-  margin-top: 0;
-  overflow-y: auto;
-  word-break: break-word;
-}
-#jp-modal-job-content .jp-job-title {
-  margin-bottom: 8px;
-  font-size: 1.14em;
-  font-weight: 600;
-}
-#jp-modal-job-content .jp-job-meta {
-  margin-bottom: 16px;
-  flex-wrap: wrap;
-  display: flex;
-  gap: 16px;
-  color: #444;
-  font-size: 15px;
-}
-#jp-modal-job-content .jp-job-badges {
-  margin-bottom: 15px;
-  flex-wrap: wrap;
-  display: flex;
-  gap: 10px;
-}
-#jp-modal-job-content .jp-job-description {
-  color: #333;
-  line-height: 1.7em;
-  margin-bottom: 18px;
-}
-#jp-modal-job-content .jp-job-desc-heading {
-  font-size: 1.1em;
-  font-weight: bold;
-  margin-top: 18px;
-  margin-bottom: 7px;
-}
-#jp-modal-job-content ul {
-  margin: 0 0 20px 18px;
-  padding: 0;
-}
-#jp-modal-job-content li {
-  font-size: 0.97em;
-  margin-bottom: 7px;
-}
+    .jp-close {
+      position: absolute;
+      right: 23px;
+      top: 20px;
+      font-size: 1.7em;
+      color: #888;
+      cursor: pointer;
+      font-weight: 600;
+      background: none;
+      border: none;
+      z-index: 1;
+    }
 
-/* Social share buttons */
-.jp-modal-social-icons {
-  display: flex;
-  gap: 10px;
-  margin-top: 10px;
-  flex-wrap: wrap;
-}
-.jp-modal-social-icons a {
-  padding: 6px 14px;
-  font-size: 14px;
-  line-height: 20px;
-  color: #fff;
-  background: #222;
-  border-radius: 8px;
-  transition: all .3s ease;
-  margin: 0;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  gap: 7px;
-}
-.jp-modal-social-icons a.linkedin { background: #0077b5; }
-.jp-modal-social-icons a.Whatsapp { background: #1bbe5f; }
-.jp-modal-social-icons a.facebook { background: #3b5998; }
+    /* Scrollbar styles */
+    .jp-modal-content::-webkit-scrollbar {
+      width: 8px;
+      background: #f6f7fa;
+    }
 
-/* Responsive: tablet and down */
-@media (max-width: 900px) {
-  .jp-modal-content {
-    width: 98vw;
-    max-width: 98vw;
-    max-height: 94vh;
-    padding: 28px 10px 18px 10px;
-    border-radius: 14px;
-  }
-  #jp-modal-job-content {
-    font-size: 1em;
-  }
-}
+    .jp-modal-content::-webkit-scrollbar-thumb {
+      border-radius: 12px;
+      background: #e2e7f0;
+    }
 
-/* Responsive: small tablets/large phones */
-@media (max-width: 700px) {
-  .jp-modal-content {
-    width: 100vw;
-    max-width: 100vw;
-    max-height: 99vh;
-    padding: 12px 3vw 12px 3vw;
-    border-radius: 7px;
-  }
-  #jp-modal-job-content .jp-job-title {
-    font-size: 1em;
-  }
-  #jp-modal-job-content .jp-job-meta {
-    font-size: 0.96em;
-    gap: 10px;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-bottom: 10px;
-  }
-  #jp-modal-job-content .jp-job-badges {
-    gap: 7px;
-    margin-bottom: 10px;
-  }
-  #jp-modal-job-content .jp-job-desc-heading {
-    font-size: 1em;
-    margin-top: 10px;
-    margin-bottom: 5px;
-  }
-  .jp-modal-social-icons {
-    gap: 7px;
-  }
-}
+    /* Modal job content styles */
+    #jp-modal-job-content {
+      font-size: 1em;
+      margin-top: 0;
+      overflow-y: auto;
+      word-break: break-word;
+    }
 
-/* Responsive: phones */
-@media (max-width: 480px) {
-  .jp-modal-content {
-    padding: 5px 2vw 10px 2vw;
-    width: 100vw;
-    max-width: 100vw;
-    max-height: 99vh;
-    border-radius: 4px;
-  }
-  #jp-modal-job-content {
-    font-size: 0.98em;
-  }
-  #jp-modal-job-content .jp-job-title {
-    font-size: 0.97em;
-    margin-bottom: 6px;
-  }
-  #jp-modal-job-content .jp-job-meta {
-    font-size: 0.91em;
-    gap: 4px;
-    margin-bottom: 7px;
-  }
-  #jp-modal-job-content .jp-job-badges {
-    gap: 3px;
-    margin-bottom: 7px;
-  }
-  #jp-modal-job-content .jp-job-desc-heading {
-    font-size: 0.95em;
-    margin-top: 7px;
-    margin-bottom: 4px;
-  }
-  .jp-close {
-    top: 8px;
-    right: 8px;
-    font-size: 1.3em;
-  }
-}
+    #jp-modal-job-content .jp-job-title {
+      margin-bottom: 8px;
+      font-size: 1.14em;
+      font-weight: 600;
+    }
 
-/* Make modal content clickable (pointer-events default). If you want extra visual feedback: */
-.jp-modal-content:active,
-.jp-modal-content:focus-within {
-  box-shadow: 0 8px 38px rgba(36,118,254,0.19);
-  outline: none;
-}
+    #jp-modal-job-content .jp-job-meta {
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+      display: flex;
+      gap: 16px;
+      color: #444;
+      font-size: 15px;
+    }
 
-.jp-modal-content {
-  cursor: pointer;
-}
+    #jp-modal-job-content .jp-job-badges {
+      margin-bottom: 15px;
+      flex-wrap: wrap;
+      display: flex;
+      gap: 10px;
+    }
 
-    
+    #jp-modal-job-content .jp-job-description {
+      color: #333;
+      line-height: 1.7em;
+      margin-bottom: 18px;
+    }
 
-    
+    #jp-modal-job-content .jp-job-desc-heading {
+      font-size: 1.1em;
+      font-weight: bold;
+      margin-top: 18px;
+      margin-bottom: 7px;
+    }
+
+    #jp-modal-job-content ul {
+      margin: 0 0 20px 18px;
+      padding: 0;
+    }
+
+    #jp-modal-job-content li {
+      font-size: 0.97em;
+      margin-bottom: 7px;
+    }
+
+    /* Social share buttons */
+    .jp-modal-social-icons {
+      display: flex;
+      gap: 10px;
+      margin-top: 10px;
+      flex-wrap: wrap;
+    }
+
+    .jp-modal-social-icons a {
+      padding: 6px 14px;
+      font-size: 14px;
+      line-height: 20px;
+      color: #fff;
+      background: #222;
+      border-radius: 8px;
+      transition: all .3s ease;
+      margin: 0;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 7px;
+    }
+
+    .jp-modal-social-icons a.linkedin {
+      background: #0077b5;
+    }
+
+    .jp-modal-social-icons a.Whatsapp {
+      background: #1bbe5f;
+    }
+
+    .jp-modal-social-icons a.facebook {
+      background: #3b5998;
+    }
+
+    /* Responsive: tablet and down */
+    @media (max-width: 900px) {
+      .jp-modal-content {
+        width: 98vw;
+        max-width: 98vw;
+        max-height: 94vh;
+        padding: 28px 10px 18px 10px;
+        border-radius: 14px;
+      }
+
+      #jp-modal-job-content {
+        font-size: 1em;
+      }
+    }
+
+    /* Responsive: small tablets/large phones */
+    @media (max-width: 700px) {
+      .jp-modal-content {
+        width: 100vw;
+        max-width: 100vw;
+        max-height: 99vh;
+        padding: 12px 3vw 12px 3vw;
+        border-radius: 7px;
+      }
+
+      #jp-modal-job-content .jp-job-title {
+        font-size: 1em;
+      }
+
+      #jp-modal-job-content .jp-job-meta {
+        font-size: 0.96em;
+        gap: 10px;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 10px;
+      }
+
+      #jp-modal-job-content .jp-job-badges {
+        gap: 7px;
+        margin-bottom: 10px;
+      }
+
+      #jp-modal-job-content .jp-job-desc-heading {
+        font-size: 1em;
+        margin-top: 10px;
+        margin-bottom: 5px;
+      }
+
+      .jp-modal-social-icons {
+        gap: 7px;
+      }
+    }
+
+    /* Responsive: phones */
+    @media (max-width: 480px) {
+      .jp-modal-content {
+        padding: 5px 2vw 10px 2vw;
+        width: 100vw;
+        max-width: 100vw;
+        max-height: 99vh;
+        border-radius: 4px;
+      }
+
+      #jp-modal-job-content {
+        font-size: 0.98em;
+      }
+
+      #jp-modal-job-content .jp-job-title {
+        font-size: 0.97em;
+        margin-bottom: 6px;
+      }
+
+      #jp-modal-job-content .jp-job-meta {
+        font-size: 0.91em;
+        gap: 4px;
+        margin-bottom: 7px;
+      }
+
+      #jp-modal-job-content .jp-job-badges {
+        gap: 3px;
+        margin-bottom: 7px;
+      }
+
+      #jp-modal-job-content .jp-job-desc-heading {
+        font-size: 0.95em;
+        margin-top: 7px;
+        margin-bottom: 4px;
+      }
+
+      .jp-close {
+        top: 8px;
+        right: 8px;
+        font-size: 1.3em;
+      }
+    }
+
+    /* Make modal content clickable (pointer-events default). If you want extra visual feedback: */
+    .jp-modal-content:active,
+    .jp-modal-content:focus-within {
+      box-shadow: 0 8px 38px rgba(36, 118, 254, 0.19);
+      outline: none;
+    }
+
+    .jp-modal-content {
+      cursor: pointer;
+    }
   </style>
 </head>
+
 <body>
-          <header>
-            <div class="header-container">
-                <span class="logo">First Job Portal</span>
-                
-                <div class="hamburger" id="hamburger">
-                    <i class="fas fa-bars"></i>
-                </div>
-                
-                <nav class="nav-menu" id="navMenu">
-                    <span class="menu">
-                        <a href="index.html">Home</a>
-                    </span>
-                    <span class="menu">
-                        <a href="#">Find Jobs</a>
-                    </span>
-                    <span class="menu">
-                        <a href="#">Employers</a>
-                    </span>
-                    <span class="menu">
-                        <a href="candidate.html">Candidates</a>
-                    </span>
-                    <span class="menu pages-dropdown">
-                        <a href="#" class="pages-dropdown-toggle">Pages <i class="fas fa-chevron-down"></i></a>
-                        <div class="pages-dropdown-content">
-                            <div class="border"></div>
-                            <a href="About(1).html">About Us</a>
-                            <a href="FAQ's.html">FAQ's</a>
-                            <a href="terms-and-conditions.html">Terms & Conditions</a>
-                            <a href="contact.html">Contact Us</a>
-                        </div>
-                    </span>
-                    
-                    <div class="header-buttons">
-                        <span class="files">
-                            <a href="upload_cv.html">Upload Your CV</a>
-                        </span>
-                        <span class="files access">
-                            <a href="login.html">Login</a>
-                        </span>
-                        <span class="files access">
-                            <a href="jobPortal/application_form.html">SignUp</a>
-                        </span>
-                        <span class="files access job-post">
-                            <a href="job post page/Jobpost.html">Job Post</a>
-                        </span>
-                    </div>
-                </nav>
-            </div>
-        </header>
+  <header>
+    <div class="header-container">
+      <span class="logo">First Job Portal</span>
+
+      <div class="hamburger" id="hamburger">
+        <i class="fas fa-bars"></i>
+      </div>
+
+      <nav class="nav-menu" id="navMenu">
+        <span class="menu">
+          <a href="index.html">Home</a>
+        </span>
+        <span class="menu">
+          <a href="#">Find Jobs</a>
+        </span>
+        <span class="menu">
+          <a href="#">Employers</a>
+        </span>
+        <span class="menu">
+          <a href="candidate.html">Candidates</a>
+        </span>
+        <span class="menu pages-dropdown">
+          <a href="#" class="pages-dropdown-toggle">Pages <i class="fas fa-chevron-down"></i></a>
+          <div class="pages-dropdown-content">
+            <div class="border"></div>
+            <a href="About(1).html">About Us</a>
+            <a href="FAQ's.html">FAQ's</a>
+            <a href="terms-and-conditions.html">Terms & Conditions</a>
+            <a href="contact.html">Contact Us</a>
+          </div>
+        </span>
+
+        <div class="header-buttons">
+          <span class="files">
+            <a href="upload_cv.html">Upload Your CV</a>
+          </span>
+          <span class="files access">
+            <a href="login.html">Login</a>
+          </span>
+          <span class="files access">
+            <a href="jobPortal/application_form.html">SignUp</a>
+          </span>
+          <span class="files access job-post">
+            <a href="job post page/Jobpost.html">Job Post</a>
+          </span>
+        </div>
+      </nav>
+    </div>
+  </header>
   <div class="jp-header-gradient">
     <div class="jp-header-content">
       <h1>Find Jobs</h1>
@@ -887,14 +1058,14 @@
       <section>
         <label class="jp-section-title">Search by Keywords</label>
         <div class="jp-input-group">
-          <input type="text" placeholder="Job title, keywords, or company" id="jp-keyword-search">
+          <input type="text" name="jobField" placeholder="Job title, keywords, or company" id="jp-keyword-search">
           <span class="jp-icon-search">&#128269;</span>
         </div>
       </section>
       <section>
         <label class="jp-section-title">Location</label>
         <div class="jp-input-group">
-          <input type="text" placeholder="City or postcode" id="jp-location-search">
+          <input type="text" name="locField" placeholder="City or postcode" id="jp-location-search">
           <span class="jp-icon-location">&#128205;</span>
         </div>
         <div class="jp-slider-label">Radius around selected destination</div>
@@ -974,7 +1145,8 @@
       <section class="jp-card jp-recruiting-card">
         <div class="jp-recruiting-content">
           <strong>Recruiting?</strong>
-          <p class="jp-recruiting-subtext">Advertise your jobs to millions of monthly users and search 15.8 million CVs in our database.</p>
+          <p class="jp-recruiting-subtext">Advertise your jobs to millions of monthly users and search 15.8 million CVs
+            in our database.</p>
           <a href="findjob.html"><button class="jp-btn-primary">Start Recruiting Now</button></a>
         </div>
       </section>
@@ -1011,98 +1183,81 @@
     </div>
   </div>
 
-  
-    <footer class="superio-footer">
-      <div class="footer-main">
-        <div class="footer-logo-block">
-          <span class="logo  -title">First Job Portal</span>
-          <div class="footer-contact">
-            <div class="call-us">Call us</div>
-            <a class="phone" href="tel:1234567890">123 456 7890</a>
-            <div class="address">
-              329 Queensberry Street, North Melbourne VIC 3051, Australia.
-            </div>
-            <div class="email">support@firstjobportal.com</div>
-          </div>
-        </div>
 
-        <div class="footer-section">
-          <div class="footer-title">For Candidates</div>
-          <ul>
-            <li><a href="candidate.html">Browse Candidates</a></li>
-            <li><a href="findjob.html">Browse Jobs</a></li>
-            <li><a href="#">Browse Categories</a></li>
-          </ul>
-        </div>
-        <div class="footer-section">
-          <div class="footer-title">For Employers</div>
-          <ul>
-            <li><a href="#">Browse Employers</a></li>
-            <li><a href="findjob.html">Browse Jobs</a></li>
-            <li><a href="#">Browse Categories</a></li>
-          </ul>
-        </div>
-        <div class="footer-section">
-          <div class="footer-title">About Us</div>
-          <ul>
-            <li><a href="About(1).html">About Us</a></li>
-            <li><a href="terms-and-conditions.html">Terms Page</a></li>
-            <li><a href="FAQ's.html">FAQ's</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-          </ul>
-        </div>
-        <div class="footer-section">
-          <div class="footer-title">Helpful Resources</div>
-          <ul>
-            <li><a href="#">Site Map</a></li>
-            <li><a href="#">Terms of Use</a></li>
-            <li><a href="#">Privacy Center</a></li>
-            <li><a href="#">Security Center</a></li>
-            <li><a href="#">Accessibility Center</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <span>© 2025 First Job Portal by Simtrak Solutions</span>
-        <div class="footer-bottom-group">
-          <div class="footer-socials">
-            <a href="#" class="footer-social" aria-label="Facebook"
-              ><i class="fab fa-facebook-f"></i
-            ></a>
-            <a href="#" class="footer-social" aria-label="WhatsApp"
-              ><i class="fab fa-whatsapp" aria-hidden="true"></i
-            ></a>
-            <a href="#" class="footer-social" aria-label="Instagram"
-              ><i class="fab fa-instagram"></i
-            ></a>
-            <a href="#" class="footer-social" aria-label="LinkedIn"
-              ><i class="fab fa-linkedin-in"></i
-            ></a>
+  <footer class="superio-footer">
+    <div class="footer-main">
+      <div class="footer-logo-block">
+        <span class="logo  -title">First Job Portal</span>
+        <div class="footer-contact">
+          <div class="call-us">Call us</div>
+          <a class="phone" href="tel:1234567890">123 456 7890</a>
+          <div class="address">
+            329 Queensberry Street, North Melbourne VIC 3051, Australia.
           </div>
-          <button class="scroll-to-top" id="scrollTopBtn" title="Go to top">
-            <svg width="32" height="32" viewBox="0 0 24 24">
-              <circle cx="12" cy="12" r="12" fill="#f2f6ff" />
-              <polyline
-                points="16 14 12 10 8 14"
-                fill="none"
-                stroke="#3664f5"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-          </button>
+          <div class="email">support@firstjobportal.com</div>
         </div>
       </div>
-    </footer>
-    <!-- FontAwesome for Social Icons -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-    />
-    <link rel="stylesheet" href="script.js">
+
+      <div class="footer-section">
+        <div class="footer-title">For Candidates</div>
+        <ul>
+          <li><a href="candidate.html">Browse Candidates</a></li>
+          <li><a href="findjob.html">Browse Jobs</a></li>
+          <li><a href="#">Browse Categories</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <div class="footer-title">For Employers</div>
+        <ul>
+          <li><a href="#">Browse Employers</a></li>
+          <li><a href="findjob.html">Browse Jobs</a></li>
+          <li><a href="#">Browse Categories</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <div class="footer-title">About Us</div>
+        <ul>
+          <li><a href="About(1).html">About Us</a></li>
+          <li><a href="terms-and-conditions.html">Terms Page</a></li>
+          <li><a href="FAQ's.html">FAQ's</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <div class="footer-title">Helpful Resources</div>
+        <ul>
+          <li><a href="#">Site Map</a></li>
+          <li><a href="#">Terms of Use</a></li>
+          <li><a href="#">Privacy Center</a></li>
+          <li><a href="#">Security Center</a></li>
+          <li><a href="#">Accessibility Center</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 First Job Portal by Simtrak Solutions</span>
+      <div class="footer-bottom-group">
+        <div class="footer-socials">
+          <a href="#" class="footer-social" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="footer-social" aria-label="WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
+          <a href="#" class="footer-social" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="footer-social" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+        <button class="scroll-to-top" id="scrollTopBtn" title="Go to top">
+          <svg width="32" height="32" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="12" fill="#f2f6ff" />
+            <polyline points="16 14 12 10 8 14" fill="none" stroke="#3664f5" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </footer>
+  <!-- FontAwesome for Social Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+  <link rel="stylesheet" href="script.js">
   <script>
-     // --- ALL YOUR JOB DATA BELOW HERE ---
+    // --- ALL YOUR JOB DATA BELOW HERE ---
     const jobs = [
       {
         id: 1,
@@ -1112,7 +1267,7 @@
         companyMeta: "Segment",
         location: "London, UK",
         time: "11 hours ago",
-          postedAt: "2025-07-14T10:00:00Z",
+        postedAt: "2025-07-14T10:00:00Z",
         salary: "$35k - $45k",
         badges: ["Full Time", "Private", "Urgent"],
         category: "Engineering",
@@ -1136,7 +1291,7 @@
         companyMeta: "Catalyst",
         location: "London, UK",
         time: "11 hours ago",
-          postedAt: "2025-08-13T10:00:00Z",
+        postedAt: "2025-08-13T10:00:00Z",
         salary: "$35k - $45k",
         badges: ["Freelancer", "Private", "Urgent"],
         category: "Management",
@@ -1160,7 +1315,7 @@
         companyMeta: "Upwork",
         location: "London, UK",
         time: "11 hours ago",
-          postedAt: "2025-07-12T10:00:00Z",
+        postedAt: "2025-07-12T10:00:00Z",
         salary: "$35k - $45k",
         badges: ["Temporary", "Private", "Urgent"],
         category: "Design",
@@ -1184,7 +1339,7 @@
         companyMeta: "Medium",
         location: "London, UK",
         time: "11 hours ago",
-          postedAt: "2025-07-1T10:00:00Z",
+        postedAt: "2025-07-1T10:00:00Z",
         salary: "$35k - $45k",
         badges: ["Full Time", "Private", "Urgent"],
         category: "Engineering",
@@ -1208,7 +1363,7 @@
         companyMeta: "Figma",
         location: "London, UK",
         time: "11 hours ago",
-          postedAt: "2025-06-14T10:00:00Z",
+        postedAt: "2025-06-14T10:00:00Z",
         salary: "$35k - $45k",
         badges: ["Freelancer", "Urgent"],
         category: "Engineering",
@@ -1232,7 +1387,7 @@
         companyMeta: "Catalyst",
         location: "London, UK",
         time: "11 hours ago",
-          postedAt: "2025-06-13T10:00:00Z",
+        postedAt: "2025-06-13T10:00:00Z",
         salary: "$35k - $45k",
         badges: ["Temporary", "Private"],
         category: "Management",
@@ -1256,7 +1411,7 @@
         companyMeta: "Invision",
         location: "London, UK",
         time: "11 hours ago",
-          postedAt: "2025-05-14T10:00:00Z",
+        postedAt: "2025-05-14T10:00:00Z",
         salary: "$35k - $45k",
         badges: ["Full Time", "Urgent"],
         category: "Management",
@@ -1280,7 +1435,7 @@
         companyMeta: "Figma",
         location: "London, UK",
         time: "11 hours ago",
-          postedAt: "2025-07-11T10:00:00Z",
+        postedAt: "2025-07-11T10:00:00Z",
         salary: "$35k - $45k",
         badges: ["Part Time"],
         category: "Engineering",
@@ -1304,7 +1459,7 @@
         companyMeta: "Upwork",
         location: "London, UK",
         time: "11 hours ago",
-          postedAt: "2025-07-14T10:00:00Z",
+        postedAt: "2025-07-14T10:00:00Z",
         salary: "$35k - $45k",
         badges: ["Full Time"],
         category: "Design",
@@ -1372,7 +1527,7 @@
     let selectedTags = [];
     const tagGroup = document.getElementById('jp-tag-group');
     tagGroup.querySelectorAll('.jp-tag').forEach(tag => {
-      tag.addEventListener('click', function() {
+      tag.addEventListener('click', function () {
         const tagVal = this.dataset.tag;
         if (selectedTags.includes(tagVal)) {
           selectedTags = selectedTags.filter(t => t !== tagVal);
@@ -1467,18 +1622,18 @@
 
         // Date posted (not implemented)
         // Date posted
-let matchDate = true;
-if (job.postedAt && datePosted !== "All") {
-  const now = new Date();
-  const postedDate = new Date(job.postedAt);
-  let hoursAgo = (now - postedDate) / (1000 * 60 * 60); // difference in hours
+        let matchDate = true;
+        if (job.postedAt && datePosted !== "All") {
+          const now = new Date();
+          const postedDate = new Date(job.postedAt);
+          let hoursAgo = (now - postedDate) / (1000 * 60 * 60); // difference in hours
 
-  if (datePosted === "Last Hour" && hoursAgo > 1) matchDate = false;
-  else if (datePosted === "Last 24 Hour" && hoursAgo > 24) matchDate = false;
-  else if (datePosted === "Last 7 Days" && hoursAgo > 24 * 7) matchDate = false;
-  else if (datePosted === "Last 14 Days" && hoursAgo > 24 * 14) matchDate = false;
-  else if (datePosted === "Last 30 Days" && hoursAgo > 24 * 30) matchDate = false;
-}
+          if (datePosted === "Last Hour" && hoursAgo > 1) matchDate = false;
+          else if (datePosted === "Last 24 Hour" && hoursAgo > 24) matchDate = false;
+          else if (datePosted === "Last 7 Days" && hoursAgo > 24 * 7) matchDate = false;
+          else if (datePosted === "Last 14 Days" && hoursAgo > 24 * 14) matchDate = false;
+          else if (datePosted === "Last 30 Days" && hoursAgo > 24 * 30) matchDate = false;
+        }
 
         return matchKeyword && matchLocation && matchCategory && matchType && matchTags && matchExp && matchSalary && matchDate;
       });
@@ -1655,6 +1810,19 @@ if (job.postedAt && datePosted !== "All") {
       }
     });
 
+    window.addEventListener("DOMContentLoaded", () => {
+      const params = new URLSearchParams(window.location.search);
+      const job = params.get("job");
+      const city = params.get("city");
+
+      // Set values in input boxes
+      if (job) document.getElementById("jp-keyword-search").value = job;
+      if (city) document.getElementById("jp-location-search").value = city;
+      renderJobs();
+    });
+
+
   </script>
 </body>
+
 </html>
