@@ -1,0 +1,899 @@
+:root {
+    --main-bg: #f6f9fc;
+    --white: #fff;
+    --primary: #246bfa;
+    --secondary: #eaf2ff;
+    --text: #202124;
+    --light-text: #6c757d;
+    --border: #e3eaf1;
+    --shadow: 0 4px 20px rgba(36,107,250,0.05), 0 1.5px 4px rgba(36,107,250,0.03);
+    --featured: #e6f8ea;
+    --featured-text: #39b54a;
+}
+* { box-sizing: border-box; }
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #fff;
+    color: var(--text);
+}
+a { text-decoration: none; color: #6c757d;}
+.jphd-main-header-239v {
+    width: 100vw;
+    background: linear-gradient(135deg, #f3f6fb, #e6effc);
+    padding: 2rem 0 3rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    margin-top: 5px;
+}
+.jphd-header-content-239v {
+    width: 90vw;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+.jphd-header-content-239v h1 {
+    margin: 1rem 0 0.4rem 0;
+    font-size: 1.9rem;
+    font-weight: 600;
+}
+.jphd-header-content-239v nav {
+    color: var(--light-text);
+    font-size: 0.85rem;
+    margin-top: 0.2rem;
+}
+.jphd-container-239v {
+    width: 90vw;
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    gap: 2.5rem;
+}
+.jphd-sidebar-239v {
+    flex: 0 0 420px;
+    background: linear-gradient(135deg, #f3f6fb, #e6effc);
+    padding: 2rem 1.5rem 1.5rem 1.5rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-self: flex-start;
+}
+.jphd-form-section-239v {
+    margin-bottom: 2rem;
+}
+.jphd-section-title-239v {
+    display: block;
+    font-weight: 600;
+    font-size: 0.93rem;
+    margin-bottom: 0.7rem;
+    color: var(--text);
+}
+.jphd-input-icon-239v {
+    position: relative;
+}
+.jphd-input-icon-239v input,
+.jphd-input-icon-239v select {
+    width: 100%;
+    padding: 12px 40px 12px 30px;
+    border: 1px solid #e6edf7;
+    border-radius: 8px;
+    outline: none;
+    background: var(--white);
+    transition: border 0.2s;
+    color: #5b616e;
+}
+.jphd-input-icon-239v input:focus,
+.jphd-input-icon-239v select:focus {
+    border-color: var(--primary);
+}
+.jphd-input-icon-239v .jphd-icon-239v {
+    position: absolute;
+    top: 50%;
+    left: 0.8rem;
+    transform: translateY(-50%);
+    color: var(--light-text);
+    font-size: 0.8em;
+}
+.jphd-slider-group-239v {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    font-size: 14px;
+}
+
+.jphd-slider-group-239v input[type="range"] {
+    width: 100%;
+    margin: 0.5rem 0;
+    background: transparent;
+    flex: 1;
+    height:4px;
+}
+.jphd-slider-value-239v {
+    display: inline-block;
+    background: var(--secondary);
+    color: var(--primary);
+    margin-top: 0.3rem;
+    padding: 0.3rem 1.2rem;
+    border-radius: 8px;
+    font-size: 0.8rem;
+}
+.jphd-search-btn-239v {
+    width: 100%;
+    background: rgb(54, 102, 247);
+    color: var(--white);
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: background 0.2s;
+    height: 40px;
+}
+.jphd-search-btn-239v:hover {
+    background: #1850b4;
+}
+.jphd-recruit-section-239v {
+    background: white;
+    border-radius: 12px;
+    padding: 18px 20px;
+    text-align: left;
+    box-shadow: none;
+}
+.jphd-recruit-section-239v h3 {
+    margin: 0 0 0.7rem 0;
+    font-weight: 500;
+    font-size: medium;
+}
+.jphd-recruit-section-239v p {
+    color: #555;
+    font-size: 0.85em;
+    margin-top:15px;
+    word-spacing: 1px;
+}
+.jphd-recruit-btn-239v {
+    background: var(--primary);
+    color: var(--white);
+    border: none;
+    border-radius: 8px;
+    padding: 10px 10px;
+    font-size: small;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-top: 12px;
+}
+.jphd-recruit-btn-239v:hover {
+    background: #1850b4;
+}
+.jphd-main-content-239v {
+    flex: 1 1 0%;
+}
+.jphd-toolbar-239v {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+.jphd-job-count-239v {
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-right: auto;
+}
+.jphd-toolbar-239v select {
+    padding: 10px 20px 10px 10px;
+    border-radius: 7px;
+    border: 1px solid var(--border);
+    background: #f7faff;
+    color: var(--text);
+    font-size: 0.78rem;
+    margin-left: 0.3rem;
+    outline: none;
+}
+.jphd-company-list-239v {
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+}
+.jphd-company-card-239v {
+    background: var(--white);
+    border-radius: 10px;
+    padding: 2rem 2.2rem 1.3rem 2.2rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 2rem;
+    position: relative;
+    cursor: pointer;
+    border: 1px solid #ecedf2;
+    transition: border 0.2s;
+}
+.jphd-company-card-239v:hover {
+    border: 2px solid var(--primary);
+}
+.jphd-company-info-239v {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.3rem;
+}
+.jphd-company-logo-239v {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #f1f5fb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    overflow: hidden;
+    font-size: 2.1rem;
+    font-weight: 700;
+    color: transparent;
+}
+.jphd-company-logo-239v img{
+    width: 100%;
+    height: 95%;
+    object-fit: contain;
+}
+.jphd-company-meta-239v {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+.jphd-company-name-239v {
+    font-weight: 600;
+    font-size: 1rem;
+    margin-bottom: 0.2rem;
+    font-family: inherit;
+}
+.jphd-company-tags-239v {
+    display: flex;
+    align-items: center;
+    gap: 1.4rem;
+    color: var(--light-text);
+    font-size: 0.9rem;
+    margin-bottom: 0.25rem;
+    padding-top: 10px;
+    margin-left: -5px;
+}
+.jphd-company-tags-239v span {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    font-size: small;
+    fill: #6c757d;
+}
+.jphd-company-description-239v {
+    color: var(--light-text);
+    font-size: 1.01rem;
+    margin-top: 0.7rem;
+    margin-bottom: 0.7rem;
+    max-width: 550px;
+    line-height: 1.5;
+}
+.jphd-company-actions-239v {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    margin-top: 0.4rem;
+}
+.jphd-open-jobs-239v {
+    background: var(--secondary);
+    color: var(--primary);
+    border-radius: 16px;
+    padding: 3px 17px;
+    margin-top: 30px;
+    font-size: 0.8rem;
+    font-weight: 400;
+    border: none;
+    outline: none;
+    transition: background 0.2s;
+}
+.jphd-featured-239v {
+    background: var(--featured);
+    color: var(--featured-text);
+    border-radius: 16px;
+    padding: 0.4rem 1.1rem;
+    font-size: 1.03rem;
+    font-weight: 500;
+    margin-right: 0.5rem;
+}
+.jphd-bookmark-btn-239v {
+    position: absolute;
+    top: 1.2rem;
+    right: 1.2rem;
+    background: var(--secondary);
+    border: none;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.jphd-bookmark-btn-239v.active {
+    background: var(--primary);
+}
+.jphd-bookmark-btn-239v svg {
+    width: 18px;
+    height: 18px;
+    fill: #bbb;
+    transition: fill 0.2s;
+}
+.jphd-bookmark-btn-239v.active svg {
+    fill: #fff;
+}
+
+/* Modal Styles */
+.jphd-modal-239v {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0; top: 0;
+    width: 100vw; height: 100vh;
+    align-items: flex-start;
+    overflow: auto;
+    background: white;
+    backdrop-filter: blur(80px);
+    -webkit-backdrop-filter: blur(10px);
+}
+.jphd-modal-239v.active {
+    display: flex;
+}
+.jphd-modal-content-239v {
+    margin: 3rem auto 2rem auto;
+    background: var(--main-bg);
+    border-radius: 0 0 16px 16px;
+    width: 90vw;
+    max-width: 1350px;
+    box-shadow: var(--shadow);
+    padding-bottom: 2.5rem;
+    position: relative;
+}
+.jphd-modal-header-239v {
+    background: linear-gradient(135deg, #f3f6fb, #e6effc);
+    padding: 2.2rem 2.8rem 2rem 2.8rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 2.2rem;
+    border-radius: 0 0 0 0;
+    position: relative;
+    margin-top: -40px;
+}
+.jphd-modal-logo-239v {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    font-size: 3rem;
+    font-weight: 700;
+}
+.jphd-modal-header-info-239v {
+    flex: 1;
+}
+.jphd-modal-header-info-239v h2 {
+    font-weight: 500;
+    font-size: 1.4rem;
+}
+.jphd-modal-header-tags-239v {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    color: var(--light-text);
+    font-size: 0.9rem;
+    margin-top: -10px;
+    margin-bottom: 0.8rem;
+    flex-wrap: wrap;
+}
+.jphd-modal-header-actions-239v {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-left: auto;
+    align-self: flex-start;
+}
+.jphd-modal-header-actions-239v .jphd-open-jobs-239v {
+    font-size: 1rem;
+}
+.jphd-modal-header-actions-239v .jphd-bookmark-btn-239v {
+    position: static;
+    margin-left: 0;
+}
+.jphd-modal-header-actions-239v .jphd-modal-close-btn-239v {
+    background: none;
+    border: none;
+    font-size: 2.1rem;
+    color: var(--light-text);
+    cursor: pointer;
+    margin-left: 0.6rem;
+    position: absolute;
+    top: 1.5rem; right: 2rem;
+}
+.jphd-modal-body-239v {
+    display: flex;
+    gap: 2.5rem;
+    padding: 1.8rem 2.8rem 0 2.8rem;
+}
+.jphd-modal-body-content-239v {
+    flex: 2;
+}
+.jphd-modal-company-title-239v {
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 0.7rem;
+}
+.jphd-modal-company-desc-239v {
+    color: var(--light-text);
+    font-size: 0.9rem;
+    margin-bottom: 1.2rem;
+    line-height: 1.5;
+}
+.jphd-modal-company-gallery-239v {
+    display: flex;
+    gap: 1.1rem;
+    margin-bottom: 1.7rem;
+    flex-wrap: wrap;
+}
+.jphd-modal-company-gallery-239v img {
+    width: 170px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 10px;
+    background: #eee;
+}
+.jphd-modal-jobs-title-239v {
+    font-weight: 600;
+    font-size: 1.35rem;
+    margin: 2.2rem 0 0.5rem 0;
+}
+.jphd-modal-jobs-list-239v {
+    margin-top: 0.7rem;
+}
+.jphd-modal-job-card-239v {
+    background: var(--white);
+    border-radius: 12px;
+    border: 1px solid #ecedf2;
+    padding: 1rem 2.2rem 1.1rem 1rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 1.1rem;
+    margin-bottom: 1.2rem;
+    position: relative;
+    flex-wrap: wrap;
+}
+.jphd-modal-job-logo-239v {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: #f1f5fb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+}
+.jphd-modal-job-meta-239v {
+    flex: 1;
+}
+.jphd-modal-job-title-239v {
+    font-weight: 500;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+.jphd-modal-job-tags-239v {
+    color: var(--light-text);
+    display: flex;
+    align-items: center;
+    gap: 1.1rem;
+    font-size: 0.8rem;
+    margin-bottom: 0.7rem;
+    flex-wrap: wrap;
+}
+.jphd-modal-job-badges-239v {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.2rem;
+    flex-wrap: wrap;
+}
+.jphd-modal-job-badge-239v {
+    padding: 0.24rem 1rem;
+    border-radius: 8px;
+    font-size: 0.94rem;
+    color: #fff;
+    background: #b4cafe;
+}
+.jphd-modal-job-badge-239v.jphd-badge-green-239v { background: #e6f8ea; color: #44a840; font-size: small; }
+.jphd-modal-job-badge-239v.jphd-badge-yellow-239v { background: #fff5d0; color: #ba8c24;font-size: small; }
+.jphd-modal-job-badge-239v.jphd-badge-blue-239v { background: #eaf2ff; color: #246bfa; font-size: small;}
+.jphd-modal-job-badge-239v.jphd-badge-grey-239v { background: #e3eaf1; color: #555; font-size: small; }
+.jphd-modal-job-salary-239v {
+    margin-left: 1.2rem;
+    color: #888;
+    font-size: 0.8rem;
+}
+
+.jphd-modal-body-side-239v {
+    flex: 1;
+    max-width: 320px;
+}
+.jphd-modal-company-data-239v {
+    background: linear-gradient(135deg, #f3f6fb, #e6effc);
+    border-radius: 12px;
+    padding: 1.9rem 1.7rem 1.9rem 1.7rem;
+    margin-bottom: 1.6rem;
+}
+.jphd-modal-company-data-239v .jphd-data-label-239v {
+    color: black;
+    font-weight: 500;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    display: inline-block;
+}
+.jphd-modal-company-data-239v .jphd-data-value-239v {
+    color: #555;
+    font-size: 0.9rem;
+    display: inline-block;
+}
+.jphd-modal-company-data-239v .jphd-modal-company-socials-239v {
+    margin-top: 0.7rem;
+}
+.jphd-modal-company-data-239v .jphd-modal-company-site-239v {
+    margin-top: 0.7rem;
+    display: block;
+    background: var(--white);
+    border-radius: 8px;
+    color: var(--primary);
+    text-align: center;
+    padding: 0.6rem 0;
+    font-weight: 400;
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+.jphd-modal-company-map-239v {
+    background: linear-gradient(135deg, #f3f6fb, #e6effc);
+    border-radius: 12px;
+    padding: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+.jphd-modal-company-map-239v h4 {
+    margin: 0 0 1rem 0;
+    font-size: 1.13rem;
+    font-weight: 600;
+}
+.jphd-modal-company-map-239v iframe, .jphd-modal-company-map-239v .jphd-map-placeholder-239v {
+    width: 100%;
+    height: 200px;
+    border: none;
+    border-radius: 9px;
+    background: #e3eaf1;
+    display: block;
+}
+.jphd-scroll-top-239v {
+    position: fixed;
+    bottom: 2.5rem;
+    right: 2.5rem;
+    background: var(--secondary);
+    border: none;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    font-size: 2rem;
+    color: var(--primary);
+    cursor: pointer;
+    box-shadow: var(--shadow);
+    display: none;
+    z-index: 100;
+}
+.jphd-scroll-top-239v.visible {
+    display: block;
+}
+
+
+
+/* Filter toggle button hidden by default */
+.jphd-filter-toggle-239v {
+  display: none;
+  padding: 12px 28px;
+  font-size: 1em;
+  background: #f7faff;
+  color: #181818;
+  border: 1px solid #e6edf7;
+  border-radius: 8px;
+  margin-left: 0.3rem;
+  cursor: pointer;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Show filter button and slide sidebar on small screens */
+@media (max-width: 900px) {
+  .jphd-filter-toggle-239v {
+    display: inline-flex;
+  }
+  .jphd-sidebar-239v {
+    position: fixed;
+    top: 0; left: 0;
+    height: 100vh;
+    width: 85vw;
+    max-width: 350px;
+    background: linear-gradient(135deg, #f3f6fb, #e6effc);
+    z-index: 10001;
+    box-shadow: 2px 0 16px rgba(36,118,254,0.13);
+    transform: translateX(-110%);
+    transition: transform 0.25s cubic-bezier(.8,0,.2,1);
+    overflow-y: auto;
+    padding-top: 50px !important;
+  }
+  .jphd-sidebar-239v.open {
+    transform: translateX(0);
+  }
+  body.jphd-filter-active-239v::before {
+    content: "";
+    position: fixed;
+    z-index: 9999;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.27);
+    pointer-events: auto;
+  }
+  .jphd-filter-close-239v {
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 2em;
+    color: #2476fe;
+    cursor: pointer;
+    z-index: 1;
+  }
+}
+/* Hide close button on desktop */
+.jphd-filter-close-239v {
+  display: none;
+}
+
+.jphd-filter-close-239v {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .jphd-filter-close-239v {
+    display: block !important;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 2em;
+    color: #2476fe;
+    cursor: pointer;
+    z-index: 10002;
+  }
+  .jphd-sidebar-239v {
+    position: fixed;
+    /* ... rest of your responsive sidebar styles ... */
+  }
+}
+
+
+
+
+
+
+/* ===================== Responsive Styles ===================== */
+
+@media (max-width: 1200px) {
+    .jphd-container-239v {
+        flex-direction: column;
+        gap: 1.5rem;
+        width: 98vw;
+        max-width: 100vw;
+    }
+    .jphd-sidebar-239v {
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    .jphd-main-content-239v {
+        width: 100%;
+    }
+    .jphd-modal-content-239v {
+        width: 98vw;
+        max-width: 98vw;
+    }
+}
+
+@media (max-width: 900px) {
+    .jphd-main-header-239v,
+    .jphd-header-content-239v,
+    .jphd-container-239v {
+        width: 100vw;
+        min-width: 0;
+        box-sizing: border-box;
+    }
+    .jphd-sidebar-239v {
+        width: 100%;
+        max-width: 100vw;
+        margin: 0;
+        padding: 1.5rem 1rem;
+    }
+    .jphd-modal-header-239v {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1.2rem 1.2rem 1rem 1.2rem;
+    }
+    .jphd-modal-content-239v {
+        width: 100vw;
+        max-width: 100vw;
+        margin: 1.5rem 0;
+        padding-bottom: 1.5rem;
+    }
+    .jphd-modal-body-239v {
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 1.2rem;
+    }
+    .jphd-modal-company-gallery-239v img {
+        width: 120px;
+        height: 100px;
+    }
+    .jphd-modal-job-card-239v {
+        flex-direction: column;
+        gap: 0.6rem;
+        padding: 1rem 0.8rem 1rem 1.1rem;
+    }
+    .jphd-modal-body-side-239v {
+        max-width: 100vw;
+    }
+}
+
+@media (max-width: 650px) {
+    .jphd-main-header-239v,
+    .jphd-header-content-239v,
+    .jphd-container-239v {
+        width: 100vw;
+        min-width: 0;
+        box-sizing: border-box;
+    }
+    .jphd-header-content-239v h1 {
+        font-size: 1.4rem;
+    }
+    .jphd-container-239v {
+        gap: 1rem;
+    }
+    .jphd-company-card-239v {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1.2rem 0.8rem 1rem 1.1rem;
+    }
+    .jphd-company-info-239v {
+        gap: 0.8rem;
+        flex-direction: row;
+    }
+    .jphd-company-meta-239v {
+        gap: 0.1rem;
+    }
+    .jphd-company-logo-239v {
+        width: 36px;
+        height: 36px;
+        font-size: 1.2rem;
+    }
+    .jphd-modal-header-239v {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1.2rem 1.2rem 1rem 1.2rem;
+    }
+    .jphd-modal-body-239v {
+        padding: 0.5rem;
+        gap: 0.7rem;
+    }
+    .jphd-modal-company-gallery-239v img {
+        width: 85px;
+        height: 65px;
+    }
+    .jphd-toolbar-239v {
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: flex-start;
+    }
+    .jphd-modal-header-tags-239v {
+        gap: 0.7rem;
+        flex-wrap: wrap;
+    }
+    .jphd-modal-body-side-239v {
+        max-width: 100vw;
+        padding: 0;
+    }
+    .jphd-modal-company-data-239v,
+    .jphd-modal-company-map-239v {
+        padding: 1rem;
+    }
+    .jphd-modal-company-map-239v iframe,
+    .jphd-modal-company-map-239v .jphd-map-placeholder-239v {
+        height: 140px;
+    }
+}
+
+@media (max-width: 400px) {
+    .jphd-main-header-239v,
+    .jphd-header-content-239v,
+    .jphd-container-239v {
+        width: 100vw;
+        min-width: 0;
+        box-sizing: border-box;
+    }
+    .jphd-header-content-239v h1 {
+        font-size: 1.1rem;
+    }
+    .jphd-container-239v {
+        gap: 0.5rem;
+    }
+    .jphd-company-card-239v {
+        flex-direction: column;
+        gap: 0.7rem;
+        padding: 1rem 0.5rem 0.7rem 0.7rem;
+    }
+    .jphd-company-info-239v {
+        gap: 0.6rem;
+        flex-direction: row;
+    }
+    .jphd-company-logo-239v {
+        width: 28px;
+        height: 28px;
+        font-size: 0.9rem;
+    }
+    .jphd-modal-header-239v {
+        flex-direction: column;
+        gap: 0.5rem;
+        padding: 0.6rem 0.6rem 0.5rem 0.6rem;
+    }
+    .jphd-modal-content-239v {
+        width: 100vw;
+        max-width: 100vw;
+        margin: 0.5rem 0;
+        padding-bottom: 0.7rem;
+    }
+    .jphd-modal-body-239v {
+        padding: 0.3rem;
+        gap: 0.4rem;
+    }
+    .jphd-modal-company-gallery-239v img {
+        width: 60px;
+        height: 45px;
+    }
+    .jphd-modal-job-card-239v {
+        flex-direction: column;
+        gap: 0.3rem;
+        padding: 0.7rem 0.5rem 0.7rem 0.6rem;
+    }
+    .jphd-modal-body-side-239v {
+        max-width: 100vw;
+        padding: 0;
+    }
+    .jphd-modal-company-data-239v,
+    .jphd-modal-company-map-239v {
+        padding: 0.5rem;
+    }
+    .jphd-modal-company-map-239v iframe,
+    .jphd-modal-company-map-239v .jphd-map-placeholder-239v {
+        height: 80px;
+    }
+    .jphd-toolbar-239v {
+        flex-direction: column;
+        gap: 0.07rem;
+        align-items: flex-start;
+        margin-bottom: 1rem;
+    }
+}
+
+/* Utility: Hide scrollbars for modals on mobile */
+@media (max-width: 650px) {
+    .jphd-modal-239v {
+        align-items: flex-start;
+        overflow-y: auto;
+    }
+}
