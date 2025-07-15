@@ -664,7 +664,7 @@ let currentFilter = {};
 // Render company cards
 function renderCompanies(filter = {}) {
     let filtered = companies.filter(company => {
-        let keywordMatch = true, locationMatch = true, categoryMatch = true, dateMatch = true, radiusMatch = true;
+        let keywordMatch = true, locationMatch = true, categoryMatch = true, dateMatch = true;
 
         // Search by keyword (name/company/desc/category)
         if (filter.keyword) {
@@ -687,10 +687,10 @@ function renderCompanies(filter = {}) {
             dateMatch = (company.foundation >= filter.foundationStart && company.foundation <= filter.foundationEnd);
         }
         // Radius around destination (simulate: always true for demo)
-        if (filter.radius) {
-            radiusMatch = true;
-        }
-        return keywordMatch && locationMatch && categoryMatch && dateMatch && radiusMatch;
+        // if (filter.radius) {
+        //     radiusMatch = true;
+        // }
+        return keywordMatch && locationMatch && categoryMatch && dateMatch ;
     });
 
     // Sort
@@ -883,8 +883,8 @@ function showModal(idx) {
 const form = document.getElementById('jphd-filter-form-239v');
 const keywordInput = document.getElementById('jphd-keyword-239v');
 const locationInput = document.getElementById('jphd-location-239v');
-const radiusInput = document.getElementById('jphd-radius-239v');
-const radiusValue = document.getElementById('jphd-radius-value-239v');
+// const radiusInput = document.getElementById('jphd-radius-239v');
+// const radiusValue = document.getElementById('jphd-radius-value-239v');
 const categoryInput = document.getElementById('jphd-category-239v');
 const foundationStart = document.getElementById('jphd-foundation-start-239v');
 const foundationEnd = document.getElementById('jphd-foundation-end-239v');
@@ -902,17 +902,17 @@ function updateFilter(e) {
         toolbarCategory: document.getElementById('jphd-filter-category-239v').value,
         foundationStart: start,
         foundationEnd: end,
-        radius: Number(radiusInput.value)
+        // radius: Number(radiusInput.value)
     };
     renderCompanies(currentFilter);
 }
 form.onsubmit = updateFilter;
 
 // Live update for range sliders
-radiusInput.oninput = () => {
-    radiusValue.textContent = `${radiusInput.value}km`;
-    updateFilter();
-};
+// radiusInput.oninput = () => {
+//     radiusValue.textContent = `${radiusInput.value}km`;
+//     updateFilter();
+// };
 const updateFoundation = () => {
     let start = Math.min(Number(foundationStart.value), Number(foundationEnd.value));
     let end = Math.max(Number(foundationStart.value), Number(foundationEnd.value));
