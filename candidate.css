@@ -229,7 +229,7 @@ ul { list-style: none; }
   .container { flex-direction: column; gap: 20px; padding: 12px; }
   .sidebar-filters { width: 100%; max-width: 100%; margin-bottom: 20px; }
   .main-content { width: 100%; }
-  .candidates-header { padding: 36px 0 24px 0; }
+
   .candidate-card{
     width: 100%;
     max-width: 350px;
@@ -349,7 +349,7 @@ ul { list-style: none; }
   align-items: center; 
   gap: 5px; 
 }
-  .candidates-header { padding: 24px 0 16px 0; }
+  
   .container { padding: 2px; gap: 8px; }
   .sidebar-filters, .main-content { width: 100%; min-width: 0; }
   .sidebar-filters { 
