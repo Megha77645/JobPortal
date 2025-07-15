@@ -206,12 +206,12 @@ const sidebarFilters = document.getElementById('sidebarFilters');
 const closeFilterBtn = document.getElementById('closeFilterBtn');
 const filterOverlay = document.getElementById('filterOverlay');
 
-// Set initial radius value
-radiusValue.textContent = radiusInput.value + "km";
-radiusInput.addEventListener('input', () => {
-  radiusValue.textContent = radiusInput.value + "km";
-  renderCandidates();
-});
+// // Set initial radius value
+// radiusValue.textContent = radiusInput.value + "km";
+// radiusInput.addEventListener('input', () => {
+//   radiusValue.textContent = radiusInput.value + "km";
+//   renderCandidates();
+// });
 
 // Mobile filter events
 if (openFilterBtn && sidebarFilters && closeFilterBtn && filterOverlay) {
