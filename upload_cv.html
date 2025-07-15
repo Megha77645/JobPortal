@@ -264,6 +264,21 @@
       border-radius: 8px;
       text-align: center;
     }
+
+    .back-btn {
+  padding: 10px 20px;
+  background-color: #f0f0f0;
+  color: #333;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.back-btn:hover {
+  background-color: #ddd;
+}
+
   </style>
   <script defer>
     document.addEventListener("DOMContentLoaded", function () {
@@ -306,6 +321,12 @@
           fileInfo.textContent = 'No file selected';
         }
       });
+            const backButton = document.getElementById('backbutton');
+      backButton.addEventListener('click', () => {
+        window.history.back();// 👈 change this to your desired previous page
+      });
+
+
     });
   </script>
 </head>
@@ -355,6 +376,8 @@
         <input type="file" id="hidden-file-input" style="display: none;">
       </div>
       <div id="selected-file-info" class="file-info">No file selected</div>
+      <!-- Back button -->
+      <button id="backbutton" class="back-btn">← Go Back</button>
     </div>
   </div>
   <script src="script.js"></script>
