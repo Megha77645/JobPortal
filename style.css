@@ -186,6 +186,9 @@ a {
 .files {
     margin: 0 8px;
 }
+.upload a{
+  color: rgb(40, 104, 243);
+}
 .access a {
     color: rgb(40, 104, 243);
 }
@@ -199,6 +202,7 @@ a {
 }
 
 .access:hover {
+   color: white;
     background-color: rgb(14, 85, 228);
 }
 

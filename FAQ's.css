@@ -5,6 +5,11 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+.home-faq a span{
+    text-decoration: none;
+    color: black;
+}
+
 .faq-body{
     height: auto;
     margin-bottom: 60px;

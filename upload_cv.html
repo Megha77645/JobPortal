@@ -264,6 +264,21 @@
       border-radius: 8px;
       text-align: center;
     }
+
+    .back-btn {
+  padding: 10px 20px;
+  background-color: #f0f0f0;
+  color: #333;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.back-btn:hover {
+  background-color: #ddd;
+}
+
   </style>
   <script defer>
     document.addEventListener("DOMContentLoaded", function () {
@@ -306,6 +321,12 @@
           fileInfo.textContent = 'No file selected';
         }
       });
+            const backButton = document.getElementById('backbutton');
+      backButton.addEventListener('click', () => {
+        window.location.href = "index.html#featureBody";// 👈 change this to your desired previous page
+      });
+
+
     });
   </script>
 </head>
@@ -318,10 +339,9 @@
       </div>
       <nav class="nav-menu" id="navMenu">
         <span class="menu"><a href="index.html">Home</a></span>
-        <span class="menu"><a href="#">Find Jobs</a></span>
-        <span class="menu"><a href="#">Employers</a></span>
+        <span class="menu"><a href="findjob.html">Find Jobs</a></span>
+        <span class="menu"><a href="Employer.html">Employers</a></span>
         <span class="menu"><a href="candidate.html">Candidates</a></span>
-        <span class="menu"><a href="#">Blogs</a></span>
         <span class="menu pages-dropdown">
           <a href="#" class="pages-dropdown-toggle">Pages <i class="fas fa-chevron-down"></i></a>
           <div class="pages-dropdown-content">
@@ -333,7 +353,7 @@
           </div>
         </span>
         <div class="header-buttons">
-          <span class="files"><a href="upload_cv.html">Upload Your CV</a></span>
+          <span class="files upload"><a href="upload_cv.html">Upload Your CV</a></span>
           <span class="files access"><a href="login.html">Login</a></span>
           <span class="files access"><a href="jobPortal/application_form.html">SignUp</a></span>
           <span class="files access job-post"><a href="job post page/Jobpost.html">Job Post</a></span>
@@ -355,6 +375,8 @@
         <input type="file" id="hidden-file-input" style="display: none;">
       </div>
       <div id="selected-file-info" class="file-info">No file selected</div>
+      <!-- Back button -->
+      <button id="backbutton" class="back-btn">← Go Back</button>
     </div>
   </div>
   <script src="script.js"></script>
