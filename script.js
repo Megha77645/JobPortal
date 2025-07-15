@@ -68,7 +68,7 @@ const jobs = [
       { text: "Private", class: "private" },
       { text: "Urgent", class: "urgent" }
     ],
-    apply_url: "#",
+    apply_url: "upload_cv.html",
     description: `As a Product Designer, you will work within a Product Delivery Team fused with UX, engineering, product and data talent and help to design beautiful interface.`,
     responsibilities: [
       "Be involved in every step of the product design cycle from discovery to developer handoff and user acceptance testing.",
@@ -96,7 +96,7 @@ const jobs = [
       { text: "Private", class: "private" },
       { text: "Urgent", class: "urgent" }
     ],
-    apply_url: "#",
+    apply_url: "upload_cv.html",
     description: `As a Recruiting Coordinator, you'll support the talent acquisition team in scheduling interviews, communicating with candidates, and ensuring a seamless hiring process.`,
     responsibilities: [
       "Schedule and coordinate interviews between candidates and hiring managers.",
@@ -124,7 +124,7 @@ const jobs = [
       { text: "Private", class: "private" },
       { text: "Urgent", class: "urgent" }
     ],
-    apply_url: "#",
+    apply_url: "upload_cv.html",
     description: `As a Product Manager, you will drive the vision, strategy, and roadmap for Invision’s Studio product. You will work with cross-functional teams to deliver features.`,
     responsibilities: [
       "Define product vision and strategy for Studio.",
@@ -152,7 +152,7 @@ const jobs = [
       { text: "Private", class: "private" },
       { text: "Urgent", class: "urgent" }
     ],
-    apply_url: "#",
+    apply_url: "upload_cv.html",
     description: `As a Senior Product Designer at Upwork, you will lead UX initiatives and collaborate with cross-functional teams to deliver intuitive and impactful product experiences.`,
     responsibilities: [
       "Lead design projects from concept to launch.",
@@ -180,7 +180,7 @@ const jobs = [
       { text: "Urgent", class: "urgent" },
       { text: "Private", class: "private" }
     ],
-    apply_url: "#",
+    apply_url: "upload_cv.html",
     description: `Spotify is looking for a Data Analyst to support our business intelligence team. You will help to analyze user data, generate reports, and provide actionable insights.`,
     responsibilities: [
       "Analyze and interpret complex data sets.",
@@ -207,7 +207,7 @@ const jobs = [
       { text: "Part Time", class: "parttime" },
       { text: "Private", class: "private" }
     ],
-    apply_url: "#",
+    apply_url: "upload_cv.html",
     description: `Join Figma as a UI/UX Designer. You will work with product teams to design compelling user interfaces and experiences that delight our customers globally.`,
     responsibilities: [
       "Design intuitive, beautiful digital user experiences.",
