@@ -186,6 +186,9 @@ a {
 .files {
     margin: 0 8px;
 }
+.upload a{
+  color: rgb(40, 104, 243);
+}
 .access a {
     color: rgb(40, 104, 243);
 }
