@@ -177,6 +177,12 @@ ul { list-style: none; }
   column-gap: 95px;
 }
 
+
+.breadcrumb a span {
+  text-decoration: none;
+  color: #555;
+}
+
 .candidate-card {
   /* width: 350px; */
   width: 300px;
