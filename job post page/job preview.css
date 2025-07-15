@@ -8,6 +8,7 @@
 
     .container {
       max-width: 890px;
+      border-radius: 25px;
       margin: auto;
       background: #fff;
       padding: 25px;
@@ -50,7 +51,7 @@
     .highlight {
       background-color: #f0f6ff;
       padding: 10px;
-      border-left: 4px solid  #228364;
+      border-left: 4px solid  #1665e3;;
       margin-top: 15px;
     }
 
@@ -75,7 +76,7 @@
     }
 
     .continue-btn {
-      background-color:  #228364;
+      background-color:  #1665e3;;
       color: white;
     }
 
@@ -107,7 +108,7 @@
 }
 
 .step.active .circle {
-  background-color: #096548;
+  background-color: #1665e3;;
 }
 
 .label {
@@ -204,7 +205,7 @@
 }
 
 .step.active .circle {
-  background-color: #096548; /* Blue */
+  background-color: #1665e3;; /* Blue */
 }
 
 .step p {
