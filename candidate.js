@@ -43,7 +43,7 @@ const candidates = [
     qualification: "Bachelor Degree",
     category: "Marketing",
     tags: ["App", "Design", "Digital"],
-    avatar: "https://media.istockphoto.com/id/1415053281/photo/profile-picture-of-happy-startup-project-leader-entrepreneur.jpg?s=612x612&w=0&k=20&c=UMcSR6B6DGmmDFGZfYp_2keuR-BohDoWQcwg4Qs3NXM=",
+    avatar: "https://media.istockphoto.com/id/1309798073/photo/head-shot-portrait-confident-attractive-young-woman-standing-at-home.jpg?s=612x612&w=0&k=20&c=ikKNHb3UmyiIIeCwrHTqvtCpsV7B6mVLsMHS9U4gTq8=",
   },
   {
     id: 4,
@@ -58,7 +58,7 @@ const candidates = [
     qualification: "Doctorate Degree",
     category: "Accountant",
     tags: ["App", "Design", "Digital"],
-    avatar: "https://media.istockphoto.com/id/1309798073/photo/head-shot-portrait-confident-attractive-young-woman-standing-at-home.jpg?s=612x612&w=0&k=20&c=ikKNHb3UmyiIIeCwrHTqvtCpsV7B6mVLsMHS9U4gTq8=",
+    avatar: "https://media.istockphoto.com/id/1415053281/photo/profile-picture-of-happy-startup-project-leader-entrepreneur.jpg?s=612x612&w=0&k=20&c=UMcSR6B6DGmmDFGZfYp_2keuR-BohDoWQcwg4Qs3NXM=",
   },
   {
     id: 5,
@@ -67,7 +67,7 @@ const candidates = [
     location: "Manchester, UK",
     rate: 85,
     featured: false,
-    gender: "Female",
+    gender: "male",
     postedHoursAgo: 10,
     experience: "1",
     qualification: "Master's Degree",
