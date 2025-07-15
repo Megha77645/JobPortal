@@ -1,3 +1,6 @@
+*{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 .step {
   position: relative;
   text-align: center;
@@ -21,7 +24,7 @@
 }
 
 .step.active .circle {
-  background-color:  #228364;
+  background-color:  #1665e3;;
 }
 
 .label {
@@ -120,7 +123,7 @@
 }
 
 .step.active .circle {
-  background-color: #096548; /* Blue */
+  background-color: #1665e3;; /* Blue */
 }
 
 .step p {
@@ -189,14 +192,14 @@
     .info-box {
       background-color: #f0f6ff;
       padding: 10px 15px;
-      border-left: 4px solid  #228364;
+      border-left: 4px solid  #1665e3;;
       margin: 20px 0;
       font-size: 0.95em;
     }
 
     .info-box a {
       font-weight: bold;
-      color:  #228364;
+      color:  #1665e3;
       text-decoration: none;
     }
 
@@ -220,6 +223,6 @@
     }
 
     .continue-btn {
-      background-color:  #228364;
+      background-color:  #1665e3;;
       color: white;
     }
