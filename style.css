@@ -199,6 +199,7 @@ a {
 }
 
 .access:hover {
+   color: white;
     background-color: rgb(14, 85, 228);
 }
 
