@@ -911,31 +911,6 @@ a { text-decoration: none; color: #6c757d;}
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 *{
     margin: 0;
     padding: 0;
@@ -1120,6 +1095,9 @@ a {
 
 .files {
     margin: 0 8px;
+}
+.upload a{
+  color: rgb(40, 104, 243);
 }
 .access a {
     color: rgb(40, 104, 243);
