@@ -1068,11 +1068,11 @@
           <input type="text" name="locField" placeholder="City or postcode" id="jp-location-search">
           <span class="jp-icon-location">&#128205;</span>
         </div>
-        <div class="jp-slider-label">Radius around selected destination</div>
+        <!-- <div class="jp-slider-label">Radius around selected destination</div>
         <div class="jp-slider-group">
           <input type="range" min="0" max="200" value="100" id="jp-radius-slider">
           <span id="jp-radius-value">100km</span>
-        </div>
+        </div> -->
       </section>
       <section>
         <label class="jp-section-title">Category</label>
@@ -1125,11 +1125,11 @@
         </div>
       </section>
       <section>
-        <label class="jp-section-title">Salary</label>
+        <!-- <label class="jp-section-title">Salary</label>
         <div class="jp-slider-group">
           <input type="range" min="0" max="20000" value="5000" id="jp-salary-slider">
           <span id="jp-salary-value">$0 - $20000</span>
-        </div>
+        </div> -->
       </section>
       <section>
         <label class="jp-section-title">Tags</label>
@@ -1561,10 +1561,10 @@
     }
 
     // Get selected salary
-    const salarySlider = document.getElementById("jp-salary-slider");
-    function getSalaryMax() {
-      return parseInt(salarySlider.value || 20000, 10);
-    }
+    // const salarySlider = document.getElementById("jp-salary-slider");
+    // function getSalaryMax() {
+    //   return parseInt(salarySlider.value || 20000, 10);
+    // }
 
     // Filter jobs based on sidebar
     function getFilteredJobs() {
@@ -1573,7 +1573,7 @@
       let category = categorySelect.value;
       let selectedTypes = getSelectedTypes();
       let experience = getSelectedExperience();
-      let salaryMax = getSalaryMax();
+      // let salaryMax = getSalaryMax();
       let datePosted = datePostedValue;
       let tags = selectedTags;
 
@@ -1611,14 +1611,14 @@
         );
 
         // Salary (simulate: parse job.salary)
-        let matchSalary = true;
-        if (job.salary) {
-          let nums = job.salary.match(/\$([\d,]+)/g);
-          if (nums) {
-            let max = Math.max(...nums.map(n => parseInt(n.replace(/\$|,/g, ''))));
-            matchSalary = max <= salaryMax;
-          }
-        }
+        // let matchSalary = true;
+        // if (job.salary) {
+        //   let nums = job.salary.match(/\$([\d,]+)/g);
+        //   if (nums) {
+        //     let max = Math.max(...nums.map(n => parseInt(n.replace(/\$|,/g, ''))));
+        //     matchSalary = max <= salaryMax;
+        //   }
+        // }
 
         // Date posted (not implemented)
         // Date posted
@@ -1635,7 +1635,7 @@
           else if (datePosted === "Last 30 Days" && hoursAgo > 24 * 30) matchDate = false;
         }
 
-        return matchKeyword && matchLocation && matchCategory && matchType && matchTags && matchExp && matchSalary && matchDate;
+        return matchKeyword && matchLocation && matchCategory && matchType && matchTags && matchExp  && matchDate;
       });
     }
 
@@ -1682,7 +1682,7 @@
           <span><span>&#128188;</span> ${job.companyMeta}</span>
           <span><span>&#128205;</span> ${job.location}</span>
           <span><span>&#128340;</span> ${job.time}</span>
-          <span><span>&#128181;</span> ${job.salary}</span>
+          // <span><span>&#128181;</span> ${job.salary}</span>
         `;
         // Badges
         const jobBadges = document.createElement("div");
@@ -1735,7 +1735,7 @@
           <span><span>&#128188;</span> ${job.companyMeta}</span>
           <span><span>&#128205;</span> ${job.location}</span>
           <span><span>&#128340;</span> ${job.time}</span>
-          <span><span>&#128181;</span> ${job.salary}</span>
+          // <span><span>&#128181;</span> ${job.salary}</span>
         </div>
         <div class="jp-job-badges">
           ${job.badges.map((b) => `<span class="jp-badge ${badgeClass[b] || "default"}">${b}</span>`).join("")}
@@ -1759,16 +1759,16 @@
     };
 
     // Slider UI for radius and salary (UI display only)
-    const radiusSlider = document.getElementById("jp-radius-slider");
-    const radiusValue = document.getElementById("jp-radius-value");
-    radiusSlider.oninput = function () {
-      radiusValue.textContent = `${this.value}km`;
-      renderJobs();
-    };
-    salarySlider.oninput = function () {
-      salaryValue.textContent = `$0 - $${this.value}`;
-      renderJobs();
-    };
+    // const radiusSlider = document.getElementById("jp-radius-slider");
+    // const radiusValue = document.getElementById("jp-radius-value");
+    // radiusSlider.oninput = function () {
+    //   radiusValue.textContent = `${this.value}km`;
+    //   renderJobs();
+    // };
+    // salarySlider.oninput = function () {
+    //   salaryValue.textContent = `$0 - $${this.value}`;
+    //   renderJobs();
+    // };
 
     // Add event listeners for filter controls
     keywordInput.addEventListener("input", renderJobs);
