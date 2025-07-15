@@ -401,6 +401,9 @@ a {
   .side > input{
     width: 100px;
   }
+  .side > input::placeholder{
+    font-size: 10px;
+  }
 }
 @media (max-width:480px) {
     .animation-box2,.animation-box3,.animation-box4,.animation-box5{
