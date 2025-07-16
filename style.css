@@ -1140,6 +1140,51 @@ body.modal-open .featured-jobs-section {
         top: 20px;
       }
 
+
+
+
+
+
+
+
+
+      .arrow-btn {
+   background-color: #ecf6f7; 
+  border: none;
+  font-size: 30px;
+  padding: 8px 16px;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  color: #696363;
+  transition: background 0.3s;
+  
+}
+
+.arrow-btn:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  color: white;
+}
+
+.left-arrow {
+  left: 10px;
+}
+
+.right-arrow {
+  right: 10px;
+}
+
+.feedback-section {
+  position: relative; /* Required to position arrows inside */
+}
+
+
+
+
+
+
       @media (max-width: 768px) {
         .feedback-container {
           width: 100%;
