@@ -25,7 +25,11 @@ img{
 .side > input{
     height: 50px;
     width: 275px;
+    border-radius: 15px;
     border: none;
+}
+.side > input::placeholder{
+  text-align: center;
 }
 .side > button{
     height: 50px;
@@ -1152,6 +1156,51 @@ body.modal-open .featured-jobs-section {
         top: 20px;
       }
 
+
+
+
+
+
+
+
+
+      .arrow-btn {
+   background-color: #ecf6f7; 
+  border: none;
+  font-size: 30px;
+  padding: 8px 16px;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  color: #696363;
+  transition: background 0.3s;
+  
+}
+
+.arrow-btn:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  color: white;
+}
+
+.left-arrow {
+  left: 10px;
+}
+
+.right-arrow {
+  right: 10px;
+}
+
+.feedback-section {
+  position: relative; /* Required to position arrows inside */
+}
+
+
+
+
+
+
       @media (max-width: 768px) {
         .feedback-container {
           width: 100%;
@@ -1331,20 +1380,29 @@ body.modal-open .featured-jobs-section {
   }
   .scroll-to-top {
     border: none;
-    background: transparent;
+    /* background: transparent; */
+    background: white;
     cursor: pointer;
     outline: none;
     margin-left: 24px;
-    transition: transform 0.3s, box-shadow 0.3s;
-    box-shadow: 0 2px 10px rgba(54, 100, 245, 0.12);
+    /* transition: transform 0.3s, box-shadow 0.3s; */
+    /* box-shadow: 0 2px 10px rgba(54, 100, 245, 0.12); */
     border-radius: 50%;
     padding: 4px;
     opacity: 0.8;
   }
+  .polyline-button{
+    background: transparent;
+      transition: transform 0.3s, box-shadow 0.3s;
+      /* text-shadow: 0 2px 10px rgba(54, 100, 245, 0.12); */
+  }
+  .polyline-button:hover{
+    box-shadow: 0 6px 18px rgba(54, 100, 245, 0.19);
+  }
   .scroll-to-top:hover,
   .scroll-to-top:focus {
     transform: translateY(-8px) scale(1.08);
-    box-shadow: 0 6px 18px rgba(54, 100, 245, 0.19);
+    /* box-shadow: 0 6px 18px rgba(54, 100, 245, 0.19); */
     opacity: 1;
   }
   @media (max-width: 1200px) {

@@ -397,6 +397,79 @@ document.addEventListener("DOMContentLoaded", function () {
   setInterval(slide, 5000);
 });
 
+
+
+
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const row = document.querySelector(".feedback-row");
+  const containers = document.querySelectorAll(".feedback-container");
+  const gap = 20;
+  let index = 0;
+
+  function slide(showCount) {
+    const itemWidth = containers[0].offsetWidth + gap;
+    const maxIndex = containers.length - showCount;
+    row.style.transform = `translateX(-${index * itemWidth}px)`;
+  }
+
+  function autoSlide() {
+    const screenWidth = window.innerWidth;
+    const showCount = screenWidth <= 768 ? 1 : 2;
+    const maxIndex = containers.length - showCount;
+
+    index = index + showCount > maxIndex ? 0 : index + showCount;
+    slide(showCount);
+  }
+
+  // Auto slide every 5 seconds
+  let interval = setInterval(autoSlide, 5000);
+
+  // Arrows
+  document.querySelector(".left-arrow").addEventListener("click", function () {
+    clearInterval(interval);
+    const screenWidth = window.innerWidth;
+    const showCount = screenWidth <= 768 ? 1 : 2;
+    const maxIndex = containers.length - showCount;
+
+    index = index - showCount < 0 ? maxIndex : index - showCount;
+    slide(showCount);
+  });
+
+  document.querySelector(".right-arrow").addEventListener("click", function () {
+    clearInterval(interval);
+    const screenWidth = window.innerWidth;
+    const showCount = screenWidth <= 768 ? 1 : 2;
+    const maxIndex = containers.length - showCount;
+
+    index = index + showCount > maxIndex ? 0 : index + showCount;
+    slide(showCount);
+  });
+
+  window.addEventListener("resize", () => {
+    slide(window.innerWidth <= 768 ? 1 : 2);
+  });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //Footer js
 document.addEventListener("DOMContentLoaded", function () {
   var scrollBtn = document.getElementById("scrollTopBtn");
