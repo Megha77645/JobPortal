@@ -93,7 +93,7 @@ document.addEventListener('DOMContentLoaded', function () {
         location: "London, UK",
         time: "11 hours ago",
         postedAt: "2025-08-13T10:00:00Z",
-        salary: "$35k - $45k",
+        salary: "$45k - $55k",
         badges: ["Freelancer", "Private", "Urgent"],
         category: "Management",
         description:
@@ -118,7 +118,7 @@ document.addEventListener('DOMContentLoaded', function () {
         location: "London, UK",
         time: "11 hours ago",
         postedAt: "2025-07-12T10:00:00Z",
-        salary: "$35k - $45k",
+        salary: "$30k - $45k",
         badges: ["Temporary", "Private", "Urgent"],
         category: "Design",
         description:
@@ -143,7 +143,7 @@ document.addEventListener('DOMContentLoaded', function () {
         location: "London, UK",
         time: "11 hours ago",
         postedAt: "2025-07-1T10:00:00Z",
-        salary: "$35k - $45k",
+        salary: "$55k - $65k",
         badges: ["Full Time", "Private", "Urgent"],
         category: "Engineering",
         description:
@@ -168,7 +168,7 @@ document.addEventListener('DOMContentLoaded', function () {
         location: "London, UK",
         time: "11 hours ago",
         postedAt: "2025-06-14T10:00:00Z",
-        salary: "$35k - $45k",
+        salary: "$25k - $35k",
         badges: ["Freelancer", "Urgent"],
         category: "Engineering",
         description:
@@ -193,7 +193,7 @@ document.addEventListener('DOMContentLoaded', function () {
         location: "London, UK",
         time: "11 hours ago",
         postedAt: "2025-06-13T10:00:00Z",
-        salary: "$35k - $45k",
+        salary: "$30k - $40k",
         badges: ["Temporary", "Private"],
         category: "Management",
         description:
@@ -218,7 +218,7 @@ document.addEventListener('DOMContentLoaded', function () {
         location: "London, UK",
         time: "11 hours ago",
         postedAt: "2025-05-14T10:00:00Z",
-        salary: "$35k - $45k",
+        salary: "$65k - $75k",
         badges: ["Full Time", "Urgent"],
         category: "Management",
         description:
@@ -268,7 +268,7 @@ document.addEventListener('DOMContentLoaded', function () {
         location: "London, UK",
         time: "11 hours ago",
         postedAt: "2025-07-14T10:00:00Z",
-        salary: "$35k - $45k",
+        salary: "$50k - $60k",
         badges: ["Full Time"],
         category: "Design",
         description:
