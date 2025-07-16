@@ -448,6 +448,23 @@ document.addEventListener('DOMContentLoaded', function () {
     // Render job cards
     function renderJobs() {
       const filteredJobs = getFilteredJobs();
+
+  const sortDropdown = document.getElementById("jp-sort-dropdown");
+  const sortBy = sortDropdown.value;
+
+  if (sortBy === "latest") {
+    filteredJobs.sort((a, b) => new Date(b.postedAt) - new Date(a.postedAt));
+  } else if (sortBy === "salary") {
+    filteredJobs.sort((a, b) => {
+      const aMax = getSalaryValue(a.salary);
+      const bMax = getSalaryValue(b.salary);
+      return bMax - aMax;
+    });
+  } else if (sortBy === "company") {
+    filteredJobs.sort((a, b) => a.company.localeCompare(b.company));
+  }
+
+
       jobCount.textContent = filteredJobs.length;
       jobList.innerHTML = "";
       filteredJobs.forEach((job) => {
@@ -586,6 +603,8 @@ document.addEventListener('DOMContentLoaded', function () {
     typeTemporary.addEventListener("change", renderJobs);
     expGroup.querySelectorAll('input[type="checkbox"]').forEach(inp => inp.addEventListener('change', renderJobs));
     expMore.querySelectorAll('input[type="checkbox"]').forEach(inp => inp.addEventListener('change', renderJobs));
+    document.getElementById("jp-sort-dropdown").addEventListener("change", renderJobs);
+
 
     // Initial render
     renderJobs();
@@ -626,4 +645,12 @@ document.addEventListener('DOMContentLoaded', function () {
       if (city) document.getElementById("jp-location-search").value = city;
       renderJobs();
     });
+
+
+
+    function getSalaryValue(salary) {
+  const match = salary.match(/\$([\d,]+)/g);
+  if (!match) return 0;
+  return Math.max(...match.map(s => parseInt(s.replace(/\$|,/g, ''))));
+}
 
