@@ -62,6 +62,7 @@ document.addEventListener('DOMContentLoaded', function () {
         id: 1,
         company: "Segment",
         logo: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSyqp0CSoYOUX1QUT--ZLADDyr4_oEsAoE9f_ueNYuRUwfu-vYY",
+        experience: "2 Year",
         title: "Software Engineer (Android), Libraries",
         companyMeta: "Segment",
         location: "London, UK",
@@ -86,6 +87,7 @@ document.addEventListener('DOMContentLoaded', function () {
         id: 2,
         company: "Catalyst",
         logo: "https://www.remotejobs.lk/wp-content/uploads/2020/11/catalyst-logo-150x150.jpg",
+        experience: "2 Year",
         title: "Recruiting Coordinator",
         companyMeta: "Catalyst",
         location: "London, UK",
@@ -110,6 +112,7 @@ document.addEventListener('DOMContentLoaded', function () {
         id: 3,
         company: "Upwork",
         logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlYDlzYS43GEt4IBZpdiBuDP2WIShC2z92dtOAI3qJzO3E_Xig",
+        experience: "2 Year",
         title: "Senior Product Designer",
         companyMeta: "Upwork",
         location: "London, UK",
@@ -134,6 +137,7 @@ document.addEventListener('DOMContentLoaded', function () {
         id: 4,
         company: "Medium",
         logo: "https://superio-appdir.vercel.app/_next/image?url=%2Fimages%2Fresource%2Fcompany-logo%2F1-5.png&w=64&q=75",
+        experience: "3 Year",
         title: "Senior Full Stack Engineer, Creator Success",
         companyMeta: "Medium",
         location: "London, UK",
@@ -158,6 +162,7 @@ document.addEventListener('DOMContentLoaded', function () {
         id: 5,
         company: "Figma",
         logo: "https://superio-appdir.vercel.app/_next/image?url=%2Fimages%2Fresource%2Fcompany-logo%2F1-6.png&w=64&q=75",
+        experience: "4 Year",
         title: "Software Engineer (Android), Libraries",
         companyMeta: "Figma",
         location: "London, UK",
@@ -182,6 +187,7 @@ document.addEventListener('DOMContentLoaded', function () {
         id: 6,
         company: "Catalyst",
         logo: "https://superio-appdir.vercel.app/_next/image?url=%2Fimages%2Fresource%2Fcompany-logo%2F1-2.png&w=64&q=75",
+        experience: "4 Year",
         title: "Recruiting Coordinator",
         companyMeta: "Catalyst",
         location: "London, UK",
@@ -206,6 +212,7 @@ document.addEventListener('DOMContentLoaded', function () {
         id: 7,
         company: "Invision",
         logo: "https://superio-appdir.vercel.app/_next/image?url=%2Fimages%2Fresource%2Fcompany-logo%2F1-3.png&w=64&q=75",
+        experience: "5 Year",
         title: "Product Manager, Studio",
         companyMeta: "Invision",
         location: "London, UK",
@@ -230,6 +237,7 @@ document.addEventListener('DOMContentLoaded', function () {
         id: 8,
         company: "Figma",
         logo: "https://superio-appdir.vercel.app/_next/image?url=%2Fimages%2Fresource%2Fcompany-logo%2F1-6.png&w=64&q=75",
+        experience: "5 Year",
         title: "Web Developer",
         companyMeta: "Figma",
         location: "London, UK",
@@ -254,6 +262,7 @@ document.addEventListener('DOMContentLoaded', function () {
         id: 9,
         company: "Upwork",
         logo: "https://superio-appdir.vercel.app/_next/image?url=%2Fimages%2Fresource%2Fcompany-logo%2F1-4.png&w=64&q=75",
+        experience: "Fresh",
         title: "Senior Product Designer",
         companyMeta: "Upwork",
         location: "London, UK",
@@ -405,9 +414,7 @@ document.addEventListener('DOMContentLoaded', function () {
         );
 
         // Experience (simulate: check in description, not real field)
-        let matchExp = experience.length === 0 || experience.some(exp =>
-          (job.description && job.description.toLowerCase().includes(exp.toLowerCase()))
-        );
+        let matchExp = experience.length === 0 || experience.includes(job.experience);
 
         // Salary (simulate: parse job.salary)
         // let matchSalary = true;
