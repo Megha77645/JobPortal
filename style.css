@@ -466,7 +466,7 @@ a {
     justify-content: center;
     align-items: flex-start; 
     min-height: 65vh;
-    margin: 0px;
+    margin-right: 60px;
     padding: 20px;
     box-sizing: border-box;
 }
@@ -494,6 +494,7 @@ a {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
     gap: 20px; /* Space between cards */
 }
 
@@ -605,6 +606,17 @@ a {
     .job-categories-container p {
     margin-top: 12px;
 }
+}
+
+@media (max-width: 380px) {
+  .main-body {
+    margin-left: 50px;
+  }
+}
+@media (max-width: 325px) {
+  .main-body {
+    padding-left: 70px;
+  }
 }
 .feature-body {
   margin: 0;
