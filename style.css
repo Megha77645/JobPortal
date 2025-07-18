@@ -722,12 +722,23 @@ a {
 
 @media (max-width: 380px) {
   .main-body {
-    margin-left: 60px;
+    margin-left: 50px;
+    justify-content: center;
+    align-items: center;
   }
 }
-@media (max-width: 325px) {
+@media (max-width: 350px) {
   .main-body {
-    padding-left: 70px;
+    margin-left: 70px;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media (max-width: 330px) {
+  .main-body {
+    padding-left: 50px;
+    justify-content: center;
+    align-items: center;
   }
 }
 .feature-body {
