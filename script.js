@@ -427,7 +427,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // Auto slide every 5 seconds
-  let interval = setInterval(autoSlide, 5000);
+  let interval = setInterval(autoSlide, 8000);
 
   // Arrows
   document.querySelector(".left-arrow").addEventListener("click", function () {
