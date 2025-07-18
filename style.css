@@ -1576,7 +1576,7 @@ body.modal-open .featured-jobs-section {
       width: 100%;
     }
   }
-  @media (max-width: 400px) {
+  /* @media (max-width: 400px) {
     .call-us {
     font-size: 1.5rem;
     }
@@ -1609,7 +1609,7 @@ body.modal-open .featured-jobs-section {
     margin-left: 70px;
   }
 
-  }
+  } */
   @media (max-width: 360px) {
     .footer-logo-block{
       margin-bottom: -80px;
@@ -1619,7 +1619,7 @@ body.modal-open .featured-jobs-section {
     }
     .phone {
     font-size: 1.4rem;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
     }
   .address,
   .email {
