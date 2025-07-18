@@ -727,7 +727,7 @@ a {
     align-items: center;
   }
 }
-@media (max-width: 335px) {
+@media (max-width: 350px) {
   .main-body {
    padding-left: 60px;
     justify-content: center;
@@ -736,7 +736,7 @@ a {
 }
 @media (max-width: 330px) {
   .main-body {
-    padding-left: 50px;
+    padding-left: 65px;
     justify-content: center;
     align-items: center;
   }
