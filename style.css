@@ -741,6 +741,13 @@ a {
     align-items: center;
   }
 }
+@media (max-width: 300px) {
+  .main-body {
+    padding-left: 80px;
+    justify-content: center;
+    align-items: center;
+  }
+}
 .feature-body {
   margin: 0;
   padding: 0;
