@@ -7,6 +7,11 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     /* ------------------ Header CSS ------------------ */
+    *{
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
     header {
       z-index: 100;
       position: fixed;
@@ -316,10 +321,10 @@
           fileInfo.textContent = 'No file selected';
         }
       });
-    });
-        const backButton = document.getElementById('back-button');
+      const backButton = document.getElementById('back-button');
     backButton.addEventListener('click', () => {
       window.history.back();
+    });
     });
 
   </script>

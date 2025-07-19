@@ -575,7 +575,7 @@ a {
     justify-content: center;
     align-items: flex-start; 
     min-height: 65vh;
-    margin-right: 60px;
+    margin-right: 10px;
     padding: 20px;
     box-sizing: border-box;
 }
@@ -682,6 +682,9 @@ a {
   .job-categories-container {
     max-width: 70%;
   }
+  .main-body {
+    margin-right: 60px;
+  }
     .category-card {
         padding: 20px;
         width:310px;
@@ -720,11 +723,29 @@ a {
 @media (max-width: 380px) {
   .main-body {
     margin-left: 50px;
+    justify-content: center;
+    align-items: center;
   }
 }
-@media (max-width: 325px) {
+@media (max-width: 350px) {
   .main-body {
-    padding-left: 70px;
+   padding-left: 60px;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media (max-width: 330px) {
+  .main-body {
+    padding-left: 65px;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media (max-width: 300px) {
+  .main-body {
+    padding-left: 80px;
+    justify-content: center;
+    align-items: center;
   }
 }
 .feature-body {
@@ -1534,6 +1555,25 @@ body.modal-open .featured-jobs-section {
     }
   }
   @media (max-width: 800px) {
+    .call-us {
+    font-size: 1.5rem;
+    }
+    .phone {
+    font-size: 1.4rem;
+    }
+    .address,
+  .email {
+    font-size: 1.1rem;
+  }
+  .footer-title {
+    font-size: 1.3rem;
+  }
+  .footer-section ul {
+    font-size: 1rem;
+  }
+    .footer-logo-block{
+      margin-bottom: -100px;
+    }
     .footer-main {
       flex-direction: column;
       align-items: flex-start;
@@ -1554,4 +1594,75 @@ body.modal-open .featured-jobs-section {
       width: 100%;
     }
   }
-  
+  /* @media (max-width: 400px) {
+    .call-us {
+    font-size: 1.5rem;
+    }
+    .phone {
+    font-size: 1.4rem;
+    margin-bottom: 25px;
+    }
+  .address,
+  .email {
+    font-size: 1.1rem;
+    color: #555;
+    margin-right: -50px;
+  }
+  .footer-section {
+    margin-top: -20px;
+  }
+  .footer-title {
+    font-size: 1.3rem;
+  }
+  .footer-section ul {
+    font-size: 1rem;
+  }
+  .footer-bottom {
+    padding-left: 50px;
+  }
+  .footer-socials {
+    padding-left: 70px;
+  }
+  .scroll-to-top {
+    margin-left: 70px;
+  }
+
+  } */
+  @media (max-width: 360px) {
+    .footer-logo-block{
+      margin-bottom: -80px;
+    }
+    .call-us {
+    font-size: 1.5rem;
+    }
+    .phone {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    }
+  .address,
+  .email {
+    font-size: 1.1rem;
+    color: #555;
+    margin-right: -90px;
+  }
+  .footer-section {
+    margin-top: -20px;
+  }
+  .footer-title {
+    font-size: 1.3rem;
+  }
+  .footer-section ul {
+    font-size: 1rem;
+  }
+  .footer-bottom {
+    padding-left: 50px;
+  }
+  .footer-socials {
+    padding-left: 70px;
+  }
+  .scroll-to-top {
+    margin-left: 70px;
+  }
+
+  } 
+
