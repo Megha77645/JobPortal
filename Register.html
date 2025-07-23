@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign-up Page</title>
+    <link rel="stylesheet" href="Register.css">
+</head>
+<body>
+  <h1>Sign-up and <span>apply for free</span></h1>
+  <p>3,00,000+ companies hiring on First Job</p>
+
+  <div class="signup-box">
+    <!-- Default buttons -->
+    <div id="button-section">
+      <button class="google-btn">
+        <img src="https://www.svgrepo.com/show/475656/google-color.svg" alt="Google Logo">
+        Sign up with Google
+      </button>
+      <button class="email-btn" onclick="showEmailForm()">Sign up with Email</button>
+    </div>
+
+    <!-- Email signup form -->
+    <div id="email-section" class="email-form">
+      <button class="google-btn">
+        <img src="https://www.svgrepo.com/show/475656/google-color.svg" alt="Google Logo">
+        Sign up with Google
+      </button>
+      <div class="divider">OR</div>
+        <label for="email">Email</label>
+      <input type="email" id="email" placeholder="Enter your email" required>
+      <label for="password">Password</label>
+      <input type="password" id="password" placeholder="Must be atleast 6 characters" required>
+      <div style="display: flex; gap: 10px;">
+        <input type="text" placeholder="First Name" id="first-name">
+        <input type="text" placeholder="Last Name" id="last-name">
+      </div>
+      <button class="submit-btn">Sign up</button>
+    </div>
+
+    <p class="terms">
+      By signing up, you agree to our 
+      <a href="#">Terms and Conditions</a>.
+    </p>
+
+    <p class="login">
+      Already registered? <a href="#">Login</a>
+    </p>
+  </div>
+
+  <script>
+    function showEmailForm() {
+  document.getElementById("button-section").style.display = "none";
+  document.getElementById("email-section").style.display = "flex";
+
+  // Email form ke Google button ka background white kar do
+  const googleBtn = document.querySelector("#email-section .google-btn");
+  googleBtn.style.backgroundColor = "white";
+  googleBtn.style.border = "1px solid #ccc"; // border optional
+}
+
+  </script>
+</body>
+</html>
