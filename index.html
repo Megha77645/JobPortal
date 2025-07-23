@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>First Job Portal</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="login.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
   <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
 </head>
@@ -50,14 +51,45 @@
               <span class="files upload">
                 <a href="upload_cv.html">Upload Your CV</a>
               </span>
-              <span class="files access">
-                <a href="login.html">Login</a>
+              <span class="files login-access">
+                <!-- <a href="login.html">Login</a> -->
+                <a id="openLogin" id="login-btn">Login</a>
+                  <!-- Login Modal Popup -->
+                <div class="modal-overlay" id="modalOverlay" style="display: none;">
+                  <div class="login-modal">
+                    <button class="close-btn" aria-label="Close" id="closeModal">&times;</button>
+                    <div class="tab-row">
+                      <button class="tab active" id="studentTab">Student</button>
+                      <button class="tab" id="employerTab">Employer / T&P</button>
+                    </div>
+                    <div id="google-login" class="google-login">
+                      <button class="google-btn">
+                        <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="Google" class="google-icon">
+                        Login with Google
+                      </button>
+                      <div class="or-divider"><span>OR</span></div>
+                    </div>
+                    <form id="loginForm" autocomplete="off">
+                      <label for="email">Email</label>
+                      <input id="email" type="email" placeholder="john@example.com" required>
+                      <label for="password">Password</label>
+                      <input id="password" type="password" placeholder="Must be atleast 6 characters" minlength="6" required>
+                      <div class="forgot-row">
+                        <a href="#" class="forgot-link">Forgot password?</a>
+                      </div>
+                      <button type="submit" class="login-btn">Login</button>
+                    </form>
+                    <div class="register-row">
+                      New to Job Portal? Register <a href="#">(Student</a> / <a href="#">Company)</a>
+                    </div>
+                  </div>
+                </div>
               </span>
-              <span class="files access">
-                <a href="jobPortal/application_form.html">SignUp</a>
+              <span class="files register-access">
+                <a href="jobPortal/application_form.html">Register</a>
               </span>
-              <span class="files access job-post">
-                <a href="job post page/Jobpost.html">Job Post</a>
+              <span class="files job-post">
+                <a href="job post page/Jobpost.html">For employers ></a>
               </span>
             </div>
           </nav>
@@ -402,6 +434,7 @@
   <!-- FontAwesome for Social Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
   <script src="script.js"></script>
+  <script src="login.js"></script>
 </body>
 
 </html>

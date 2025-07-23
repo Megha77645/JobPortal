@@ -305,39 +305,52 @@ a {
     color: rgb(40, 104, 243);
 }
 
-.access {
-    border: 0px;
+.login-access {
+    border: 1px solid rgb(40, 104, 243);
     border-radius: 5px;
-    padding: 8px 15px;
-    background-color: rgba(220, 216, 216, 0.845);
+    padding: 4px 15px;
+    padding-bottom: 8px;
+    /* background-color: rgba(220, 216, 216, 0.845); */
     transition: all 0.3s;
+    margin-bottom: -5px;
 }
 
-.access:hover {
-   color: white;
-    background-color: rgb(14, 85, 228);
+.login-access:hover {
+  cursor: pointer;
 }
 
-.access a:hover {
-    color: white;
+.login-access a{
+    color: rgb(40, 104, 243);
+    font-weight: 600;
 }
-
+.register-access{
+  border: 1px solid rgb(40, 104, 243);
+  border-radius: 5px;
+  padding: 4px 15px;
+  margin-bottom: -5px;
+  padding-bottom: 8px;
+  background-color: rgb(40, 104, 243) ;
+}
+.register-access a{
+  color: white;
+  font-weight: 600;
+}
 .job-post {
     border: 0px;
     border-radius: 5px;
-    padding: 8px 15px;
-    background-color: rgb(59, 124, 253);
-    color: white;
+    /* padding: 8px 15px; */
+    /* background-color: rgb(59, 124, 253); */
     transition: all 0.3s;
 }
 
 .job-post a {
-    color: white;
+    color: rgb(40, 104, 243);
+    font-weight: 600;
 }
 
-.job-post:hover {
+/* .job-post:hover {
     background-color: rgb(14, 85, 228);
-}
+} */
 
 /* Dropdown Styles */
 .pages-dropdown {
